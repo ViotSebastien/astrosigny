@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Astronomie{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('build/css/style.css')}}">
+        {% endblock %}
+    </head>
+    <header>
+    {% block header %}
+    <div id="sidebar">
+        {% include 'site/menus.html.twig' %}
+    </div>
+    {% endblock %}
+  </header>
+    <body>
+      {% block body %}
+      <div id="content">
+          <p>Créé en 1998 par un groupe de passionnés, c'est lors de l'éclipse totale de Soleil du 11 Aout, qu'il ouvrit réellement ses portes. Le Club d'Astronomie de Signy-L'Abbaye a pour but de promouvoir et de faire découvrir la culture scientifique dans les alentours de Signy-L'Abbaye ( Ardennes).
+Aujourd'hui, en 2006, notre club compte une trentaine de membres et travaille en collaboration avec le Club Oméga Ardennes Astronomie situé à Rumigny. Depuis plusieurs années désormais, le club sort ses instruments lors des manifestations locales afin de faire découvrir les merveilles du ciel à tout le public.
+
+Grande manifestation annuelle, La nuit des Etoiles, réunit à chaque fois une centaine de participants lorsque le temps le permet. Pour la Nuit des Etoiles 2003, le club d'Astronomie de Signy-L'Abbaye a décidé de s'associer à l'événement national en collaboration avec Ciel et Espace. L'augmentation de la communication due à cette collaboration a permis de réunir plus de 200 personnes en deux jours ! Avec des conditions d'observations tout à fait favorables, Mars et les étoiles filantes ont ravi le public !
+
+Mais le club d'astronomie ne se résume pas à la Nuit des Etoiles, le premier vendredi du mois, les membres se réunissent afin d'observer, de discuter et aussi d'appréhender des phénomènes célestes tels que les phases des lunes, les saisons, les coordonnées... Toutes ces réunions se passent dans la joie et la bonne humeur, dans le local du club à la médiathèque ou à l'Observatoire de Lalobbe afin de profiter des 300 mm du télescope "Maison".
+
+Vous voulez découvrir le ciel, comprendre les phénomènes célestes, observer pendant de longues heures Jupiter et les Anneaux de Saturne ou tout simplement jeter un coup d'oeil curieux dans l'oculaire d'un instrument, n'hésitez pas à nous rejoindre ! Nous vous accueillerons avec le plus grand des plaisirs ! Adultes comme enfants.
+
+La cotisation annuelle s'élève à 6 Euros pour les Adultes et à 3 Euros pour les enfants.
+Restez attentif dans les journaux locaux pour connaître le programme de nos animations ou contactez le Syndicat d'initiative de Signy-l'Abbaye.
+
+Nous sommes à l'écoute de vos suggestions et remarques ! Un simple message fait toujours plaisir !
+De la même manière, si vous apercevez un bug, une erreur, signalez-la !</p>
+        </div>
+        {% endblock %}
+    </body>
+</html>
