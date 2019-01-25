@@ -31,8 +31,8 @@ class DefaultController extends AbstractController
   */
   public function manifestation()
   {
-  return new Response('manifestation !');
-  //return $this->render('site\manifestation.html.twig');
+  //return new Response('manifestation !');
+  return $this->render('site\manifestation.html.twig');
   }
   /**
   * @Route("/astronomie",name="astronomie")
