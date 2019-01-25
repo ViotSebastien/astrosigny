@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerRxPELO8\srcApp_KernelDevDebugContainer(array(
     'container.build_hash' => 'RxPELO8',
-    'container.build_id' => '613cb81e',
-    'container.build_time' => 1548348320,
+    'container.build_id' => 'd8b43cbb',
+    'container.build_time' => 1548407454,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerRxPELO8');
