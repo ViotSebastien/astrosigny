@@ -5,3 +5,5 @@
 require_once __DIR__ . '/composer/autoload_real.php';
 
 return ComposerAutoloaderInitc6626523d2e4f19920a20d7c22ce5895::getLoader();
+use Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver;
+AnnotationDriver::registerAnnotationClasses();

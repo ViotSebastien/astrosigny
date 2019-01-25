@@ -8,6 +8,8 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
+        '06dd8487319ccd8403765f5b8c9f2d61' => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo/functions.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
@@ -105,6 +107,7 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MongoDB\\' => 8,
         ),
         'F' => 
         array (
@@ -126,6 +129,7 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'Doctrine\\Bundle\\MongoDBBundle\\' => 30,
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
@@ -134,6 +138,7 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
         array (
             'App\\Tests\\' => 10,
             'App\\' => 4,
+            'Alcaeus\\MongoDbAdapter\\' => 23,
         ),
     );
 
@@ -416,6 +421,10 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MongoDB\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
+        ),
         'Fig\\Link\\' => 
         array (
             0 => __DIR__ . '/..' . '/fig/link-util/src',
@@ -467,6 +476,10 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
             3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
+        'Doctrine\\Bundle\\MongoDBBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/mongodb-odm-bundle',
+        ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle',
@@ -487,6 +500,10 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'Alcaeus\\MongoDbAdapter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Alcaeus/MongoDbAdapter',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -504,8 +521,23 @@ class ComposerStaticInitc6626523d2e4f19920a20d7c22ce5895
                 0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
             ),
         ),
+        'M' => 
+        array (
+            'Mongo' => 
+            array (
+                0 => __DIR__ . '/..' . '/alcaeus/mongo-php-adapter/lib/Mongo',
+            ),
+        ),
         'D' => 
         array (
+            'Doctrine\\ODM\\MongoDB' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/mongodb-odm/lib',
+            ),
+            'Doctrine\\MongoDB' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/mongodb/lib',
+            ),
             'Doctrine\\Common\\Lexer\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',

@@ -7,7 +7,8 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+use App\Document;
+use Doctrine\ODM\MongoDB\DocumentManager as DocumentManager;
 class DefaultController extends AbstractController
 {
   /**
@@ -66,4 +67,20 @@ class DefaultController extends AbstractController
   return new Response('observatoire');
   //return $this->render('observatoire.html.twig');
   }
+  /**
+  * @Route("/coucou",name="coucou")
+  */
+  public function createAction(DocumentManager $dm)
+  {
+      $product = new Product();
+      $product->setName('A Foo Bar');
+      $product->setPrice('19.99');
+
+      $dm = $this->get('doctrine_mongodb')->getManager();
+      $dm->persist($product);
+      $dm->flush();
+
+      return new Response('Created product id '.$product->getId());
+  }
+
 }
