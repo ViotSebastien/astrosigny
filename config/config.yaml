@@ -14,3 +14,7 @@ doctrine_mongodb:
                     class: Class\Example\Filter\ODM\ExampleFilter
                     enabled: true
             metadata_cache_driver: array # array, apc, apcu, memcache, memcached, redis, wincache, zenddata, xcache
+
+twig:
+    form_themes:
+        - 'bootstrap_4_layout.html.twig'

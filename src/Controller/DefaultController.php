@@ -20,20 +20,17 @@ class DefaultController extends AbstractController
   return $this->render('index.html.twig');
   }
   /**
-  * @Route("/contact",name="contact")
-  */
-  public function contact()
-  {
-  return new Response('contact !');
-  //return $this->render('site\contact.html.twig');
-  }
-  /**
   * @Route("/manifestation",name="manifestation")
   */
   public function manifestation()
   {
   //return new Response('manifestation !');
-  return $this->render('site\manifestation.html.twig');
+  $manifes = new \stdClass();
+  $manifes->titre = "Les 50 ans de l'homme sur la Lune";
+  $manifes->description = "Exposition sur la mission Apollo";
+  $manifes->Date = date("Ymd");
+  return $this->render('site\manifestation.html.twig',
+  ['mafes' => $manifes]);
   }
   /**
   * @Route("/astronomie",name="astronomie")
@@ -70,17 +67,5 @@ class DefaultController extends AbstractController
   /**
   * @Route("/coucou",name="coucou")
   */
-  public function createAction(DocumentManager $dm)
-  {
-      $product = new Product();
-      $product->setName('A Foo Bar');
-      $product->setPrice('19.99');
-
-      $dm = $this->get('doctrine_mongodb')->getManager();
-      $dm->persist($product);
-      $dm->flush();
-
-      return new Response('Created product id '.$product->getId());
-  }
 
 }
