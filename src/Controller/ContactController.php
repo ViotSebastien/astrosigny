@@ -1,53 +1,53 @@
 <?php
 namespace App\Controller;
-
-use App\Entity\Contact;
+use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class ContactController extends AbstractController
 {
   /**
   * @Route("/contact",name="contact")
   */
-    public function new(Request $request)
+    public function index(Request $request,\Swift_Mailer $mailer)
     {
-        // creates a task and gives it some dummy data for this example
-        $contact = new Contact();
-        $contact->setText('Write a blog post');
-        $contact->setDueDate(new \DateTime('tomorrow'));
 
-        $form = $this->createFormBuilder($contact)
-            ->add('name', TextType::class)
-            ->add('email', TextType::class)
-            ->add('dueDate', DateType::class)
-            ->add('text', TextType::class)
-            ->add('save', SubmitType::class, ['label' => 'Create Task'])
-            ->getForm();
+        $form = $this->createForm(ContactType::class);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-             // $form->getData() holds the submitted values
-             // but, the original `$task` variable has also been updated
-             $contact = $form->getData();
-
-             // ... perform some action, such as saving the task to the database
-             // for example, if Task is a Doctrine entity, save it!
-             // $entityManager = $this->getDoctrine()->getManager();
-             // $entityManager->persist($task);
+            $data = $form->getData();
+            var_dump($data);
+              ContactController::envoi($data,$mailer);
+             // $entiWrite a blog posttyManager = $this->getDoctrine()->getManager();
+             // $entityManager->persist($contact);
              // $entityManager->flush();
 
-             return $this->redirectToRoute('task_success');
+             return $this->redirectToRoute('index');
         }
 
 
         return $this->render('site/contact.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+    public function envoi($contact,$mailer)
+    {
+      $message = (new \Swift_Message('demande_info'))
+        ->setFrom('Contact@astrosigny.fr')
+        ->setTo('symfonytest95@gmail.com')
+        ->setBody(
+            $this->renderView(
+                // templates/emails/registration.html.twig
+                'emails/sendmail.html.twig',
+                ['contact' => $contact]
+            ),
+            'text/html'
+        );
+
+    $mailer->send($message);
     }
 }
