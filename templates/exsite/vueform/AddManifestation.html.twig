@@ -16,11 +16,15 @@
   </header>
     <body>
       {% block body %}
-      <div id="content">
-          <h2>Manifestation du {{ mafes.date }}</h2>
-          <h2>{{ mafes.titre }}</h2>
-          <h3>{{ mafes.description }}</h3>
+      <div id="formulaire">
+          <h2>Ajouter Manifestation </h2>
+          <h3>{{ form(AddManifestation) }}</h3>
       </div>
         {% endblock %}
-    </body>
+      </body>
+      {% block footer %}
+      <footer>
+          {% include 'exsite/footer.html.twig' %}
+      </footer>
+      {% endblock %}
 </html>

@@ -1,7 +1,5 @@
 <?php
 //src/Controller/DefaultController.php
-
-
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
@@ -20,25 +18,12 @@ class DefaultController extends AbstractController
   return $this->render('index.html.twig');
   }
   /**
-  * @Route("/manifestation",name="manifestation")
-  */
-  public function manifestation()
-  {
-  //return new Response('manifestation !');
-  $manifes = new \stdClass();
-  $manifes->titre = "Les 50 ans de l'homme sur la Lune";
-  $manifes->description = "Exposition sur la mission Apollo";
-  $manifes->Date = date("Ymd");
-  return $this->render('site\manifestation.html.twig',
-  ['mafes' => $manifes]);
-  }
-  /**
   * @Route("/astronomie",name="astronomie")
   */
   public function astronomie()
   {
   return new Response('astronomie !');
-//  return $this->render('Astronomie.html.twig');
+//  return $this->render('site\astronomie.html.twig');
   }
   /**
   * @Route("/astronautique",name="astronautique")
@@ -46,7 +31,7 @@ class DefaultController extends AbstractController
   public function astronautique()
   {
   return new Response('astronautique !');
-  //return $this->render('astronautique.html.twig');
+  //return $this->render('site\astronautique.html.twig');
   }
   /**
   * @Route("/cadran_solaire",name="cadran_solaire")
@@ -54,7 +39,7 @@ class DefaultController extends AbstractController
   public function cadran_solaire()
   {
   return new Response('cadran_solaire !');
-  //return $this->render('cadran_solaire.html.twig');
+  //return $this->render('site\cadran_solaire.html.twig');
   }
   /**
   * @Route("/observatoire",name="observatoire")
@@ -62,7 +47,7 @@ class DefaultController extends AbstractController
   public function observatoire()
   {
   return new Response('observatoire');
-  //return $this->render('observatoire.html.twig');
+  //return $this->render('site\observatoire.html.twig');
   }
   /**
   * @Route("/coucou",name="coucou")

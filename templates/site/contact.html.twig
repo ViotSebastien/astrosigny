@@ -10,15 +10,21 @@
     <header>
     {% block header %}
     <div id="sidebar">
-        {% include 'site/menus.html.twig' %}
+        {% include 'exsite/menus.html.twig' %}
     </div>
     {% endblock %}
   </header>
     <body>
       {% block body %}
-      <div id="content">
-          <h1>{{ form(form) }}</h1>
+      <div id="formulaire">
+          <h2>Formulaire de contact</h2>
+          <h3>{{ form(form) }}</h3>
       </div>
         {% endblock %}
-    </body>
+      </body>
+      {% block footer %}
+      <footer>
+          {% include 'exsite/footer.html.twig' %}
+      </footer>
+      {% endblock %}
 </html>

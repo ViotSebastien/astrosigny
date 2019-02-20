@@ -1,5 +1,5 @@
 var Encore = require('@symfony/webpack-encore');
-
+var CopyWebpackPlugin = require('copy-webpack-plugin'); // this line tell to webpack to use the plugin
 Encore
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
@@ -20,7 +20,9 @@ Encore
     .addEntry('js/app', './assets/js/app.js')
     .addStyleEntry('css/app', './assets/scss/app.scss')
     //.addEntry('page2', './assets/js/page2.js')
-
+    .addPlugin(new CopyWebpackPlugin([
+        { from: './assets/images', to: 'images' }
+    ]))
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()

@@ -4,13 +4,25 @@ $color: white;
 body {
   width: auto;
   height: auto;
-    background-color: black;
+  background-image:url("/build/images/background.jpg")  ;
+}
+header {
+  width: auto;
+  height: auto;
+  background-color: $color;
+}
 
+#headerimg {
+  width: 30px;
+  height: 30px;
 }
 
 #content {
+  border: 2px solid $color;
+  border-radius: 8px;
   text-align: justify;
   color: $color;
+  position: relative;
   width: 82%;
   height: auto;
   margin: 10px;
@@ -20,6 +32,44 @@ body {
   {
     margin: 10px;
     background-color: gray;
+    margin-left: 100px;
+    padding: 10px;
+  }
+}
+
+#formulaire {
+  border: 2px solid $color;
+  border-radius: 8px;
+  text-align: justify;
+  color: $color;
+  width: 500px;
+  height: auto;
+  left: 350px;
+  padding: 10px;
+  label.required
+  {
+    margin: 5px;
+  }
+  input#contact_name
+  {
+    margin: 5px;
+  }
+  input#contact_email
+  {
+    margin: 5px;
+  }
+  textarea#contact_message
+  {
+    margin: 5px;
+  }
+  button#contact_save
+  {
+    margin: 5px;
+  }
+
+  h2
+  {
+    margin: 10px;
     margin-left: 100px;
     padding: 10px;
   }

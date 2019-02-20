@@ -8,25 +8,21 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Type;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
-class ContactType extends AbstractType
+class ManifestationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class,[
+            ->add('titre', TextType::class,[
                 'constraints' => new NotBlank(),
             ])
-            ->add('email', EmailType::class,[
-                'constraints' => new NotBlank(),
-            ])
-            ->add('message', TextareaType::class,[
-                'constraints' => new NotBlank(),
-            ])
+            ->add('datedebut', DateTimeType::class)
+            ->add('datefin', DateTimeType::class)
+            ->add('description',TextareaType::class)
             ->add('save', SubmitType::class, ['label' => 'Send'])
             ->getForm();
     }
