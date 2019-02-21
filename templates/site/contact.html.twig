@@ -5,6 +5,8 @@
         <title>{% block title %}Astronomie{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
         {% endblock %}
     </head>
     <header>
@@ -17,8 +19,8 @@
     <body>
       {% block body %}
       <div id="formulaire">
-          <h2>Formulaire de contact</h2>
-          <h3>{{ form(form) }}</h3>
+          <h2>Formulaire de Contact</h2>
+             <h3>{{ form(form) }}</h3>
       </div>
         {% endblock %}
       </body>
