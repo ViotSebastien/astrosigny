@@ -2,25 +2,33 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Astronomie{% endblock %}</title>
-        {% block stylesheets %}
-        <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
-        {% endblock %}
+        <title>
+          {% block title %}
+            Astronomie
+          {% endblock %}
+        </title>
+          {% block stylesheets %}
+            <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
+          {% endblock %}
     </head>
     <header>
-    {% block header %}
-    <div id="sidebar">
-        {% include 'exsite/menus.html.twig' %}
-    </div>
-    {% endblock %}
-  </header>
+      {% block header %}
+          <div id="sidebar">
+              {% include 'exsite/menus.html.twig' %}
+          </div>
+      {% endblock %}
+    </header>
     <body>
       {% block body %}
-      <div id="content">
-          <h2>Manifestation du {{ mafes.date }}</h2>
-          <h2>{{ mafes.titre }}</h2>
-          <h3>{{ mafes.description }}</h3>
-      </div>
-        {% endblock %}
+        {% for showmafestations in showmafestation %}
+        <div id="content">
+            <h3>Manifestation {{ showmafestations.datedebut }} à {{ showmafestations.datefin }}</h3>
+            <h2>{{ showmafestations.titre }}</h2>
+            <h5>{{ showmafestations.description }}</h5>
+            <button type="button" name="button" class="btn btn-warning">Modifier</button>
+            <button type="button" name="button" class="btn btn-danger">Supprimer</button>
+        </div>
+        {% endfor %}
+      {% endblock %}
     </body>
 </html>

@@ -11,7 +11,25 @@ use Doctrine\ODM\MongoDB\DocumentManager as DocumentManager;
 class ManifestationController extends AbstractController
 {
   /**
-  * @Route("/addmanifestation",name="addmanifestation",methods={"POST","GET"})
+  * @Route("/manifestation",name="manifestation")
+  */
+  public function manifestation(DocumentManager $dm)
+  {
+  //return new Response('manifestation !');
+        $data=$dm->getRepository('App:Manifestation')->findAll();
+        for ($i=0; $i < sizeof($data); $i++) {
+          $manifestation[$i] = new Manifestation();
+          $manifestation[$i]->setId($data[$i]->getId());
+          //$manifestation[$i]->setDateFin($data[$i]->getDateFin());
+        //  $manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
+          $manifestation[$i]->setDescription($data[$i]->getDescription());
+          }
+        return $this->render('site\manifestation.html.twig',
+        ['showmafestation' => $manifestation]);
+  }
+
+  /**
+  * @Route("/manifestation/create",name="addmanifestation",methods={"POST","GET"})
   */
     public function createmanifestation(Request $request,DocumentManager $dm)
     {
@@ -21,25 +39,19 @@ class ManifestationController extends AbstractController
             $data = $form->getData();
             $manifestation = new Manifestation();
             $manifestation->setTitre($data["titre"]);
+            $manifestation->setDateDebut($data["datedebut"]);
+            $manifestation->setDateFin($data["datefin"]);
+            $manifestation->setDescription($data["description"]);
             $dm->persist($manifestation);
             $dm->flush();
             //return $this->redirectToRoute('index');
         }
         return $this->render('exsite/vueform/AddManifestation.html.twig', [
-            'AddManifestation' => $form->createView(),
+            'createmanifestation' => $form->createView(),
         ]);
     }
     /**
-    * @Route("/manifestation",name="manifestation")
+    * @Route("/manifestation/delete",name="addmanifestation",methods={"POST","GET"})
     */
-    public function manifestation()
-    {
-    //return new Response('manifestation !');
-          $manifes = new \stdClass();
-          $manifes->titre = "Les 50 ans de l'homme sur la Lune";
-          $manifes->description = "Exposition sur la mission Apollo";
-          $manifes->date = date("Ymd");
-          return $this->render('site\manifestation.html.twig',
-          ['mafes' => $manifes]);
-    }
+
 }

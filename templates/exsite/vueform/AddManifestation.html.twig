@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <title>{% block title %}Astronomie{% endblock %}</title>
         {% block stylesheets %}
-        <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
+          <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
         {% endblock %}
+        {% form_theme createmanifestation 'bootstrap_4_layout.html.twig' %}
     </head>
     <header>
     {% block header %}
@@ -18,7 +19,7 @@
       {% block body %}
       <div id="formulaire">
           <h2>Ajouter Manifestation </h2>
-          <h3>{{ form(AddManifestation) }}</h3>
+          <h3>{{ form(createmanifestation) }}</h3>
       </div>
         {% endblock %}
       </body>

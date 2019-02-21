@@ -45,16 +45,33 @@ class Manifestation
     {
       return $this->titre=$titre;
     }
+    public function getTitre()
+    {
+      return $this->titre;
+    }
     public function setDescription($description)
     {
       return $this->description=$description;
+    }
+    public function getDescription()
+    {
+      return $this->description;
     }
     public function setDateFin($datefin)
     {
       return $this->datefin=$datefin;
     }
+    public function getDateFin()
+    {
+      return $this->datefin;
+    }
+    public function getDateDebut()
+    {
+      return $this->datedebut;
+    }
     public function setDateDebut($datedebut)
     {
       return $this->datedebut=$datedebut;
     }
+
 }
