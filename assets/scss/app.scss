@@ -5,11 +5,13 @@ body {
   background-image: linear-gradient(black, blue);
   background-repeat: no-repeat;
 }
+
 header {
   width: auto;
   height: auto;
   background-color: #736F7D;
 }
+
 #content {
   border: 2px solid $color;
   border-radius: 8px;
@@ -58,19 +60,22 @@ header {
     margin: 5px;
     margin-right: 10px;
   }
-
   h2
   {
     text-align: center;
   }
 }
-.card{
+
+.card
+{
   width: 1200px;
   height: auto;
   margin: auto;
   background-color: #B1A17E;
   margin-top: 20px;
 }
-.bg-light{
+
+.bg-light
+{
   background-color: #F09135;
 }
