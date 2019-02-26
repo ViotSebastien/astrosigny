@@ -24,7 +24,7 @@
           <button type="button" name="button" class="btn btn-info">Ajouter</button>
         </a>
       {% for showmafestations in showmafestation %}
-      <input type="hidden" name="id" value="{{ showmafestations.id }}" />
+      <input type="hidden" name="id" value={{showmafestations.id}} />
         <div class="card">
           <div class="card-body" >
             <h3 class="card-title">Manifestation {{ showmafestations.datedebut }} à {{ showmafestations.datefin }}</h3>

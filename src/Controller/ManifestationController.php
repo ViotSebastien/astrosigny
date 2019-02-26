@@ -20,6 +20,7 @@ class ManifestationController extends AbstractController
         for ($i=0; $i < sizeof($data); $i++) {
           $manifestation[$i] = new Manifestation();
           $manifestation[$i]->setId($data[$i]->getId());
+          $manifestation[$i]->setTitre($data[$i]->getTitre());
           //$manifestation[$i]->setDateFin($data[$i]->getDateFin());
         //  $manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
           $manifestation[$i]->setDescription($data[$i]->getDescription());
@@ -51,7 +52,25 @@ class ManifestationController extends AbstractController
         ]);
     }
     /**
-    * @Route("/manifestation/delete",name="addmanifestation",methods={"POST","GET"})
+    * @Route("/manifestation/delete",name="addmanifestation",methods={"GET"})
     */
-
+    public function deletemanifestation(Request $request,DocumentManager $dm)
+    {
+        $form = $this->createForm(ManifestationType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $manifestation = new Manifestation();
+            $manifestation->setTitre($data["titre"]);
+            $manifestation->setDateDebut($data["datedebut"]);
+            $manifestation->setDateFin($data["datefin"]);
+            $manifestation->setDescription($data["description"]);
+            $dm->persist($manifestation);
+            $dm->flush();
+            //return $this->redirectToRoute('index');
+        }
+        return $this->render('exsite/vueform/AddManifestation.html.twig', [
+            'createmanifestation' => $form->createView(),
+        ]);
+    }
 }
