@@ -32,7 +32,7 @@ class ManifestationController extends AbstractController
   /**
   * @Route("/manifestation/create",name="addmanifestation",methods={"POST","GET"})
   */
-    public function createmanifestation(Request $request,DocumentManager $dm)
+    public function createAction(Request $request,DocumentManager $dm)
     {
         $form = $this->createForm(ManifestationType::class);
         $form->handleRequest($request);
@@ -52,25 +52,28 @@ class ManifestationController extends AbstractController
         ]);
     }
     /**
-    * @Route("/manifestation/delete",name="addmanifestation",methods={"GET"})
+    * @Route("/manifestation/delete",name="deletemanifestation",methods={"GET"})
     */
-    public function deletemanifestation(Request $request,DocumentManager $dm)
+    public function deleteAction($id,DocumentManager $dm)
     {
-        $form = $this->createForm(ManifestationType::class);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $data = $form->getData();
-            $manifestation = new Manifestation();
-            $manifestation->setTitre($data["titre"]);
-            $manifestation->setDateDebut($data["datedebut"]);
-            $manifestation->setDateFin($data["datefin"]);
-            $manifestation->setDescription($data["description"]);
-            $dm->persist($manifestation);
+            $data = $dm->getRepository('App:Manifestation')->find($id);
+            $dm->remove($data);
             $dm->flush();
-            //return $this->redirectToRoute('index');
-        }
-        return $this->render('exsite/vueform/AddManifestation.html.twig', [
-            'createmanifestation' => $form->createView(),
-        ]);
     }
+    /**
+    * @Route("/manifestation/update",name="deletemanifestation",methods={"GET"})
+    */
+/*   public function updateAction($id,DocumentManager $dm)
+    {
+          $manifestation = $dm->getRepository('App:Manifestation')->find($id);
+          $manifestation->setTitre($data["titre"]);
+          $manifestation->setDateDebut($data["datedebut"]);
+          $manifestation->setDateFin($data["datefin"]);
+          $manifestation->setDescription($data["description"]);
+          $dm->persist($manifestation);
+          $dm->flush();
+
+        return $this->redirectToRoute('homepage');
+    }*/
+
 }
