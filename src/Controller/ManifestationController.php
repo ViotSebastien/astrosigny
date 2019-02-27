@@ -59,6 +59,7 @@ class ManifestationController extends AbstractController
             $data = $dm->getRepository('App:Manifestation')->find($id);
             $dm->remove($data);
             $dm->flush();
+            return $this->render('site/Manifestation.html.twig');
     }
     /**
     * @Route("/manifestation/update",name="deletemanifestation",methods={"GET"})
