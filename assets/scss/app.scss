@@ -12,14 +12,17 @@ header {
   background: #3d6277;
 }
 // ******************************* Nav **********************************
-.bg-light
-{
-  background: #3d6277;
+#sidebar{
+  .bg-light
+  {
+    //background: #3d6277;
+  }
+
+  .navbar .navbar-expand-lg .navbar-light .bg-light .navbar-brand{
+    color: white;
+  }
 }
 
-.navbar-light .navbar-nav .nav-link .navbar-brand{
-  color: white;
-}
 // ******************************* Body **********************************
 .card
 {
