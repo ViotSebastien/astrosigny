@@ -13,15 +13,15 @@ header {
 // ******************************* Nav **********************************
 #sidebar{
   nav{
-      color: white;
-      background: #3d6277;
+        background: #3d6277;
+        a{
+            .navbar-brand{
+                color: white;
+          }
+            .nav-link  {
+                color: white;
+          }
     }
-
-  a{
-    .navbar-brand{
-        color: white;
-    }
-  }
 }
 
 // ******************************* Body **********************************
