@@ -71,7 +71,6 @@ header {
   width: 1200px;
   height: auto;
   margin: auto;
-  background: #3d6277;
   margin-top: 20px;
 }
 
@@ -81,12 +80,21 @@ header {
 }
 
 .footer-bottom{
-  background: #3d6277;
-  padding: 2em;
+    margin-top: 10px;
 }
 
 .footer-middle{
    background: #3d6277;
   padding-top: 2em;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.navbar-light .navbar-brand{
+  background: #3d6277;
+}
+
+.navbar-light .navbar-nav .nav-link{
   color: white;
 }
