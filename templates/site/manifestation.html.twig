@@ -23,17 +23,25 @@
         <a href="/manifestation/create">
           <button type="button" name="button" class="btn btn-info">Ajouter</button>
         </a>
-      {% for showmafestations in showmafestation %}
+      {% if showmafestation.id == "0" %}
         <div class="card">
           <div class="card-body" >
-            <h3 class="card-title">Manifestation {{ showmafestations.datedebut }} à {{ showmafestations.datefin }}</h3>
             <h3 class="card-title">{{ showmafestations.titre }}</h3>
-            <p class="card-text">{{ showmafestations.description }}</p>
-            <a href="/manifestation/update/{id}"><button type="button" name="button" class="btn btn-warning">Modifier</button></a>
-            <a href="/manifestation/delete/{{ showmafestations.id }}"><button type="button" name="button" class="btn btn-danger">Supprimer</button></a>
           </div>
         </div>
-        {% endfor %}
+      {% else %}
+        {% for showmafestations in showmafestation %}
+          <div class="card">
+            <div class="card-body" >
+              <h3 class="card-title">Manifestation {{ showmafestations.datedebut }} à {{ showmafestations.datefin }}</h3>
+              <h3 class="card-title">{{ showmafestations.titre }}</h3>
+              <p class="card-text">{{ showmafestations.description }}</p>
+              <a href="/manifestation/update/{id}"><button type="button" name="button" class="btn btn-warning">Modifier</button></a>
+              <a href="/manifestation/delete/{{showmafestations.id}}"><button type="button" name="button" class="btn btn-danger">Supprimer</button></a>
+            </div>
+          </div>
+          {% endfor %}
+        {% endif %}
       {% endblock %}
     </body>
 </html>

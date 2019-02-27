@@ -17,16 +17,23 @@ class ManifestationController extends AbstractController
   {
   //return new Response('manifestation !');
         $data=$dm->getRepository('App:Manifestation')->findAll();
-        for ($i=0; $i < sizeof($data); $i++) {
-          $manifestation[$i] = new Manifestation();
-          $manifestation[$i]->setId($data[$i]->getId());
-          $manifestation[$i]->setTitre($data[$i]->getTitre());
-          //$manifestation[$i]->setDateFin($data[$i]->getDateFin());
-        //  $manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
-          $manifestation[$i]->setDescription($data[$i]->getDescription());
-          }
-        return $this->render('site\manifestation.html.twig',
-        ['showmafestation' => $manifestation]);
+        if (sizeof($data) == 0){
+          $manifestation->setId("0");
+          $manifestation->setTitre("pas de manifestation en cours");
+          return $this->render('site/manifestation.html.twig',
+          ['showmafestation' => $manifestation]);
+        }else {
+          for ($i=0; $i < sizeof($data); $i++) {
+              $manifestation[$i] = new Manifestation();
+              $manifestation[$i]->setId($data[$i]->getId());
+              $manifestation[$i]->setTitre($data[$i]->getTitre());
+              //$manifestation[$i]->setDateFin($data[$i]->getDateFin());
+              //$manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
+              $manifestation[$i]->setDescription($data[$i]->getDescription());
+              }
+            return $this->render('site/manifestation.html.twig',
+            ['showmafestation' => $manifestation]);
+        }
   }
 
   /**
@@ -45,7 +52,7 @@ class ManifestationController extends AbstractController
             $manifestation->setDescription($data["description"]);
             $dm->persist($manifestation);
             $dm->flush();
-            //return $this->redirectToRoute('index');
+            return $this->redirectToRoute('manifestation');
         }
         return $this->render('exsite/vueform/AddManifestation.html.twig', [
             'createmanifestation' => $form->createView(),
@@ -59,10 +66,10 @@ class ManifestationController extends AbstractController
             $data = $dm->getRepository('App:Manifestation')->find($id);
             $dm->remove($data);
             $dm->flush();
-            return $this->render('site/Manifestation.html.twig');
+            return $this->render('site/manifestation.html.twig');
     }
     /**
-    * @Route("/manifestation/update",name="deletemanifestation",methods={"GET"})
+    * @Route("/manifestation/update/{id}",name="updatemanifestation",methods={"GET","POST"})
     */
 /*   public function updateAction($id,DocumentManager $dm)
     {
