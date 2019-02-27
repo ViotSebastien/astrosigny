@@ -18,6 +18,7 @@ class ManifestationController extends AbstractController
   //return new Response('manifestation !');
         $data=$dm->getRepository('App:Manifestation')->findAll();
         if (sizeof($data) == 0){
+          $manifestation = new Manifestation();
           $manifestation->setId("0");
           $manifestation->setTitre("pas de manifestation en cours");
           return $this->render('site/manifestation.html.twig',
