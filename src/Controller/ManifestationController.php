@@ -52,7 +52,7 @@ class ManifestationController extends AbstractController
         ]);
     }
     /**
-    * @Route("/manifestation/delete",name="deletemanifestation",methods={"GET"})
+    * @Route("/manifestation/delete/{id}",name="deletemanifestation",methods={"GET","HEAD"})
     */
     public function deleteAction($id,DocumentManager $dm)
     {
