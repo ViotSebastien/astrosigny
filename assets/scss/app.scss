@@ -12,10 +12,13 @@ header {
 }
 // ******************************* Nav **********************************
 #sidebar{
-  .navbar .navbar-expand-lg .navbar-light .bg-light{
-    color: white;
-    background: #3d6277;
+  nav{
+    .navbar .navbar-expand-lg .navbar-light .bg-light{
+      color: white;
+      background: #3d6277;
+    }
   }
+
   a{
     .navbar-brand{
         color: white;
