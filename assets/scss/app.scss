@@ -14,32 +14,7 @@ header {
 #sidebar{
   nav{
         background: #3d6277;
-        a{
-            .navbar-brand{
-                color: white;
-          }
-            .nav-link  {
-                color: white;
-          }
-        }
-        div{
-          #navbarSupportedContent{
-            ul{
-                .navbar-nav .mr-auto{
-                    li{
-                      .nav-item{
-                        a{
-                          .nav-link{
-                            color: white;
-                          }
-                        }
-                      }
-                    }
-                }
-            }
-          }
-        }
-      }
+    }
 }
 // ******************************* Body **********************************
 .card

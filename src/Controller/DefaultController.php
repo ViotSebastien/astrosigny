@@ -46,11 +46,15 @@ class DefaultController extends AbstractController
   */
   public function observatoire()
   {
-  return new Response('observatoire');
-  //return $this->render('site\observatoire.html.twig');
+  //return new Response('observatoire');
+  return $this->render('site\observatoire.html.twig');
   }
   /**
-  * @Route("/coucou",name="coucou")
+  * @Route("/chemindesplanete",name="chemindesplanete")
   */
-
+  public function chemindesplanete()
+  {
+  //return new Response('chemindesplanete');
+  return $this->render('site\chemindesplanete.html.twig');
+  }
 }
