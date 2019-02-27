@@ -9,17 +9,17 @@ line-height: normal;
 header {
   width: auto;
   height: auto;
-  background: #3d6277;
 }
 // ******************************* Nav **********************************
 #sidebar{
-  .bg-light
-  {
-    //background: #3d6277;
-  }
-
-  .navbar .navbar-expand-lg .navbar-light .bg-light .navbar-brand{
+  .navbar .navbar-expand-lg .navbar-light .bg-light{
     color: white;
+    background: #3d6277;
+  }
+  a{
+    .navbar-brand{
+        color: white;
+    }
   }
 }
 
@@ -93,7 +93,7 @@ header {
 .footer-middle{
    background: #3d6277;
   padding-top: 2em;
-  color: white;
+  color: $color;
   margin-top: 15px;
   margin-bottom: 2px;
 }
