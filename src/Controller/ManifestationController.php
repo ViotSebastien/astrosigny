@@ -17,10 +17,12 @@ class ManifestationController extends AbstractController
   {
   //return new Response('manifestation !');
         $data=$dm->getRepository('App:Manifestation')->findAll();
+        var_dump($data);
         if (sizeof($data) == 0){
           $manifestation = new Manifestation();
           $manifestation->setId("0");
           $manifestation->setTitre("pas de manifestation en cours");
+          var_dump($manifestation);
           return $this->render('site/manifestation.html.twig',
           ['showmafestation' => $manifestation]);
         }else {
