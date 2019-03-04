@@ -17,26 +17,23 @@ class ManifestationController extends AbstractController
   {
   //return new Response('manifestation !');
         $data=$dm->getRepository('App:Manifestation')->findAll();
-        var_dump($data);
-        if ($data == NULL ){
-          $manifestation = new Manifestation();
-          $manifestation->setId("0");
-          $manifestation->setTitre("pas de manifestation en cours");
-          var_dump($manifestation);
-          return $this->render('site/manifestation.html.twig',
-          ['showmafestation' => $manifestation]);
-        }else {
-          for ($i=0; $i < sizeof($data); $i++) {
+        //var_dump($data);
+        if ($data != NULL ){
+          for ($i=0; $i < sizeof($data); $i++)
+            {
               $manifestation[$i] = new Manifestation();
+              var_dump($data[$i]->getDateFin());
               $manifestation[$i]->setId($data[$i]->getId());
               $manifestation[$i]->setTitre($data[$i]->getTitre());
-              //$manifestation[$i]->setDateFin($data[$i]->getDateFin());
-              //$manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
+              $manifestation[$i]->setDateFin($data[$i]->getDateFin());
+              $manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
               $manifestation[$i]->setDescription($data[$i]->getDescription());
-              }
+            }
             return $this->render('site/manifestation.html.twig',
             ['showmafestation' => $manifestation]);
         }
+      return $this->render('site/manifestation.html.twig',
+      ['showmafestation' => $data]);
   }
 
   /**
@@ -69,7 +66,7 @@ class ManifestationController extends AbstractController
             $data = $dm->getRepository('App:Manifestation')->find($id);
             $dm->remove($data);
             $dm->flush();
-            return $this->render('site/manifestation.html.twig');
+            return $this->redirectToRoute('manifestation');
     }
     /**
     * @Route("/manifestation/update/{id}",name="updatemanifestation",methods={"GET","POST"})

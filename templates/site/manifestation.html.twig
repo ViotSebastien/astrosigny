@@ -20,20 +20,23 @@
     </header>
     <body>
       {% block body %}
-        <a href="/manifestation/create">
-          <button type="button" name="button" class="btn btn-info">Ajouter</button>
-        </a>
-      {% if showmafestation.id == "0" %}
+      {% if showmafestation is empty %}
         <div class="card">
           <div class="card-body" >
-            <h3 class="card-title">{{ showmafestation.titre }}</h3>
+            <h3 class="card-title">pas de manifestation en cours</h3>
+            <a href="/manifestation/create">
+              <button type="button" name="button" class="btn btn-info">Ajouter</button>
+            </a>
           </div>
         </div>
       {% else %}
+      <a href="/manifestation/create">
+        <button type="button" name="button" class="btn btn-info">Ajouter</button>
+      </a>
         {% for showmafestations in showmafestation %}
           <div class="card">
             <div class="card-body" >
-              <h3 class="card-title">Manifestation {{ showmafestations.datedebut }} à {{ showmafestations.datefin }}</h3>
+              <h3 class="card-title">Manifestation {{ showmafestations.datedebut.date }} à {{ showmafestations.datefin.date }}</h3>
               <h3 class="card-title">{{ showmafestations.titre }}</h3>
               <p class="card-text">{{ showmafestations.description }}</p>
               <a href="/manifestation/update/{id}"><button type="button" name="button" class="btn btn-warning">Modifier</button></a>
@@ -42,6 +45,11 @@
           </div>
           {% endfor %}
         {% endif %}
+      {% endblock %}
+      {% block footer %}
+      <footer class="mainfooter" role="contentinfo">
+        {% include 'exsite/footer.html.twig' %}
+      </footer>
       {% endblock %}
     </body>
 </html>

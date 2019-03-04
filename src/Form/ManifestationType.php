@@ -20,8 +20,12 @@ class ManifestationType extends AbstractType
             ->add('titre', TextType::class,[
                 'constraints' => new NotBlank(),
             ])
-            ->add('datedebut', DateTimeType::class)
-            ->add('datefin', DateTimeType::class)
+            ->add('datedebut', DateTimeType::class,[
+                'date_format' => 'dd-MM-yyyy HH:mm',
+            ])
+            ->add('datefin', DateTimeType::class,[
+                'date_format' => 'dd-MM-yyyy HH:mm',
+            ])
             ->add('description',TextareaType::class)
             ->add('save', SubmitType::class, ['label' => 'Send'])
             ->getForm();
