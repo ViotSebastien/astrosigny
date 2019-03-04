@@ -21,10 +21,16 @@ class ManifestationType extends AbstractType
                 'constraints' => new NotBlank(),
             ])
             ->add('datedebut', DateTimeType::class,[
-                'date_format' => 'dd-MM-yyyy HH:mm',
+              'placeholder' => [
+                'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',
+              ]
             ])
             ->add('datefin', DateTimeType::class,[
-                'date_format' => 'dd-MM-yyyy HH:mm',
+              'placeholder' => [
+                'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',
+              ]
             ])
             ->add('description',TextareaType::class)
             ->add('save', SubmitType::class, ['label' => 'Send'])

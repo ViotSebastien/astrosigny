@@ -17,12 +17,10 @@ class ManifestationController extends AbstractController
   {
   //return new Response('manifestation !');
         $data=$dm->getRepository('App:Manifestation')->findAll();
-        //var_dump($data);
         if ($data != NULL ){
           for ($i=0; $i < sizeof($data); $i++)
             {
               $manifestation[$i] = new Manifestation();
-              var_dump($data[$i]->getDateFin());
               $manifestation[$i]->setId($data[$i]->getId());
               $manifestation[$i]->setTitre($data[$i]->getTitre());
               $manifestation[$i]->setDateFin($data[$i]->getDateFin());
