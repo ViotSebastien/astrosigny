@@ -5,53 +5,15 @@
         <title>{% block title %}Astronomie{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
-
         {% endblock %}
         {% block javascripts %}
-        
+          <script src="{{asset('build/js/app.js')}}"></script>
+        {% endblock %}
     </head>
     <header>
     {% block header %}
     <div id="sidebar">
-        {% include 'exsite/menus.html.twig' %}<nav class="navbar navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="/">CASA Astrosigny</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Acceuil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/manifestation">Manifestation</a>
-      </li>
-      <li>
-        <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/observatoire">Observatoire</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/chemindesplanete">Chemin des planète</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+        {% include 'exsite/menus.html.twig' %}
     </div>
     {% endblock %}
   </header>
