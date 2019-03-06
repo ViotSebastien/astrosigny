@@ -14,6 +14,20 @@ header {
 #sidebar{
   nav{
         background: #3d6277;
+        .dropdown {
+
+            .dropdown-toggle {
+                color:#fff;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                will-change: transform;
+                top: 0px;
+                left: 0px;
+                transform: translate3d(0px, 48px, 0px);
+            }
+}
     }
 }
 // ******************************* Body **********************************
