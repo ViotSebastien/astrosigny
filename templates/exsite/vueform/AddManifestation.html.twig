@@ -5,8 +5,12 @@
         <title>{% block title %}Astronomie{% endblock %}</title>
         {% block stylesheets %}
           <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
+          {% form_theme createmanifestation 'bootstrap_4_layout.html.twig' %}
         {% endblock %}
-        {% form_theme createmanifestation 'bootstrap_4_layout.html.twig' %}
+        
+        {% block javascripts %}
+          {{ encore_entry_script_tags('js/app') }}
+        {% endblock %}
     </head>
     <header>
     {% block header %}
