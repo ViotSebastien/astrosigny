@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Astronomie{% endblock %}</title>
+        {% block stylesheets %}
+          <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
+        {% endblock %}
+        {% block javascripts %}
+          {{ encore_entry_script_tags('js/app') }}
+        {% endblock %}
+    </head>
+    {% block header %}
+      <header>
+      <div id="sidebar">
+          {% include 'exsite/menus.html.twig' %}
+      </div>
+      </header>
+    {% endblock %}
+<body>
+  {% block body %}
+  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <section id="astrophotographie">
+    <div class="card" data-depth="0.2">
+      <div class="card-body" >
+        <h5 class="card-title">Astrophotographie</h5>
+          <p class="card-text">
+            Les astronomes amateurs observent une variété d'objets célestes, au moyen d'un équipement qu'ils construisent parfois eux-mêmes. Les cibles les plus communes pour un astronome amateur sont la Lune, les planètes, les étoiles, les comètes, les essaims météoritiques, ainsi que les objets du ciel profond que sont les amas stellaires, les galaxies et les nébuleuses. Une branche de l'astronomie amateur est l'astrophotographie, consistant à photographier le ciel nocturne. Une partie des amateurs aime se spécialiser dans l'observation d'un type d'objet particulier.
+
+            La plupart des amateurs observent le ciel aux longueurs d’onde visibles, mais une minorité travaille avec des rayonnements hors du spectre visible. Cela comprend l'utilisation de filtres infrarouges sur des télescopes conventionnels, ou l'utilisation de radiotélescopes. Le pionnier de la radioastronomie amateur était Karl Jansky qui a commencé à observer le ciel en ondes radio dans les années 1930. Un certain nombre d'amateurs utilisent soit des télescopes fabriqués de leurs mains, soit des télescopes qui ont été construits à l'origine pour la recherche astronomique mais qui leur sont maintenant ouverts (par exemple le One-Mile Telescope).
+
+            Une certaine frange de l'astronomie amateur continue de faire progresser l'astronomie. En fait, il s'agit de l'une des seules sciences où les amateurs peuvent contribuer de manière significative[réf. nécessaire]. Ceux-ci peuvent effectuer les calculs d'occultation qui servent à préciser les orbites des planètes mineures. Ils peuvent aussi découvrir des comètes, effectuer des observations régulières d'étoiles doubles ou multiples. Les avancées en technologie numérique ont permis aux amateurs de faire des progrès impressionnants dans le domaine de l'astrophotographie.
+          </p>
+      </div>
+    </div>
+  </section>
+  <section id="astronomie">
+    <div class="card">
+      <div class="card-body" >
+        <h5 class="card-title">l'Astronomie</h5>
+          <p class="card-text">
+            Les astronomes amateurs observent une variété d'objets célestes, au moyen d'un équipement qu'ils construisent parfois eux-mêmes. Les cibles les plus communes pour un astronome amateur sont la Lune, les planètes, les étoiles, les comètes, les essaims météoritiques, ainsi que les objets du ciel profond que sont les amas stellaires, les galaxies et les nébuleuses. Une branche de l'astronomie amateur est l'astrophotographie, consistant à photographier le ciel nocturne. Une partie des amateurs aime se spécialiser dans l'observation d'un type d'objet particulier. La plupart des amateurs observent le ciel aux longueurs d’onde visibles, mais une minorité travaille avec des rayonnements hors du spectre visible. Cela comprend l'utilisation de filtres infrarouges sur des télescopes conventionnels, ou l'utilisation de radiotélescopes. Le pionnier de la radioastronomie amateur était Karl Jansky qui a commencé à observer le ciel en ondes radio dans les années 1930. Un certain nombre d'amateurs utilisent soit des télescopes fabriqués de leurs mains, soit des télescopes qui ont été construits à l'origine pour la recherche astronomique mais qui leur sont maintenant ouverts (par exemple le One-Mile Telescope). Une certaine frange de l'astronomie amateur continue de faire progresser l'astronomie. En fait, il s'agit de l'une des seules sciences où les amateurs peuvent contribuer de manière significative[réf. nécessaire]. Ceux-ci peuvent effectuer les calculs d'occultation qui servent à préciser les orbites des planètes mineures. Ils peuvent aussi découvrir des comètes, effectuer des observations régulières d'étoiles doubles ou multiples. Les avancées en technologie numérique ont permis aux amateurs de faire des progrès impressionnants dans le domaine de l'astrophotographie.
+          </p>
+      </div>
+    </div>
+  </section>
+  <section id="astronautique">
+    <div class="card">
+      <div class="card-body" >
+        <h5 class="card-title">Astronautique</h5>
+          <p class="card-text">
+            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" class="img-fluid">
+          </p>
+      </div>
+    </div>
+  </section>
+  <section id="cadran_solaire">
+    <div class="card">
+      <div class="card-body" >
+        <h5 class="card-title">Cadran_solaire</h5>
+          <p class="card-text">
+            Les astronomes amateurs observent une variété d'objets célestes, au moyen d'un équipement qu'ils construisent parfois eux-mêmes. Les cibles les plus communes pour un astronome amateur sont la Lune, les planètes, les étoiles, les comètes, les essaims météoritiques, ainsi que les objets du ciel profond que sont les amas stellaires, les galaxies et les nébuleuses. Une branche de l'astronomie amateur est l'astrophotographie, consistant à photographier le ciel nocturne. Une partie des amateurs aime se spécialiser dans l'observation d'un type d'objet particulier. La plupart des amateurs observent le ciel aux longueurs d’onde visibles, mais une minorité travaille avec des rayonnements hors du spectre visible. Cela comprend l'utilisation de filtres infrarouges sur des télescopes conventionnels, ou l'utilisation de radiotélescopes. Le pionnier de la radioastronomie amateur était Karl Jansky qui a commencé à observer le ciel en ondes radio dans les années 1930. Un certain nombre d'amateurs utilisent soit des télescopes fabriqués de leurs mains, soit des télescopes qui ont été construits à l'origine pour la recherche astronomique mais qui leur sont maintenant ouverts (par exemple le One-Mile Telescope). Une certaine frange de l'astronomie amateur continue de faire progresser l'astronomie. En fait, il s'agit de l'une des seules sciences où les amateurs peuvent contribuer de manière significative[réf. nécessaire]. Ceux-ci peuvent effectuer les calculs d'occultation qui servent à préciser les orbites des planètes mineures. Ils peuvent aussi découvrir des comètes, effectuer des observations régulières d'étoiles doubles ou multiples. Les avancées en technologie numérique ont permis aux amateurs de faire des progrès impressionnants dans le domaine de l'astrophotographie.
+          </p>
+      </div>
+    </div>
+  </section>
+  <section id="observatoire">
+    <div class="card">
+      <div class="card-body" >
+        <h5 class="card-title">Observatoire</h5>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="{{asset('build/images/observatoire1.jpg')}}" alt="First slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+  {% block footer %}
+  <footer>
+      {% include 'exsite/footer.html.twig' %}
+  </footer>
+  {% endblock %}
+  </div>
+</body>
+</html>

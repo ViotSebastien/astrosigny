@@ -1,11 +1,11 @@
 <?php
 namespace App\Controller;
-use App\Form\ManifestationType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use App\Document\Manifestation;
+use App\Form\ManifestationType;
 use Doctrine\ODM\MongoDB\DocumentManager as DocumentManager;
 
 class ManifestationController extends AbstractController

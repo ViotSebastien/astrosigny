@@ -5,56 +5,36 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Document;
+use App\Controller\ManifestationController;
+use Symfony\Component\Translation\TranslatorInterface;
 use Doctrine\ODM\MongoDB\DocumentManager as DocumentManager;
+
 class DefaultController extends AbstractController
 {
   /**
   * @Route("/",name="index")
   */
-  public function index()
+  public function index(TranslatorInterface $translator)
   {
   //return new Response('Hello World !');
-  return $this->render('index.html.twig');
+  //$haut3=$translator->trans('text.sidebar.3',[], null, 'fr');
+  //$haut2=$translator->trans('text.sidebar.2',[], null, 'fr');
+  //$haut1=$translator->trans('text.sidebar.1',[], null, 'fr');
+  //$text= $translator->trans('text.message',[], null, 'fr');
+  //$bas= $translator->trans('text.footer',[], null, 'fr');
+  //ManifestationController::manifestation($dm);
+  return $this->render('site/base.html.twig');
   }
   /**
-  * @Route("/astronomie",name="astronomie")
+  * @Route("/en",name="index_EN")
   */
-  public function astronomie()
+  public function index_EN(TranslatorInterface $translator)
   {
-  return new Response('astronomie !');
-//  return $this->render('site\astronomie.html.twig');
-  }
-  /**
-  * @Route("/astronautique",name="astronautique")
-  */
-  public function astronautique()
-  {
-  return new Response('astronautique !');
-  //return $this->render('site\astronautique.html.twig');
-  }
-  /**
-  * @Route("/cadran_solaire",name="cadran_solaire")
-  */
-  public function cadran_solaire()
-  {
-  return new Response('cadran_solaire !');
-  //return $this->render('site\cadran_solaire.html.twig');
-  }
-  /**
-  * @Route("/observatoire",name="observatoire")
-  */
-  public function observatoire()
-  {
-  //return new Response('observatoire');
-  return $this->render('site\observatoire.html.twig');
-  }
-  /**
-  * @Route("/chemindesplanete",name="chemindesplanete")
-  */
-  public function chemindesplanete()
-  {
-  //return new Response('chemindesplanete');
-  return $this->render('site\chemindesplanete.html.twig');
+  //return new Response('Hello World !');
+  $text= $translator->trans('text.message',[], null, 'en');
+
+  return $this->render('index.html.twig',[
+    'text' => $text
+  ]);
   }
 }
