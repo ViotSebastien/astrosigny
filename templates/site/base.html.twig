@@ -20,6 +20,33 @@
 <body>
   {% block body %}
   <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <section id="chemindesplanetes">
+      <div class="card" data-depth="0.2">
+        <div class="card-body" >
+          <h5 class="card-title">Chemin des Planètes</h5>
+            <p class="card-text">
+                  Crée en mardi 07 décembre 2005, le chemin des planètes et un circuit de 6,7 km sur 6230 hectares sur le domaine de Signy L’Abbaye.
+                  Ce chemin permettra de se rendre compte des distances et des tailles relatives de notre étoile, le Soleil, et des huit planètes connues plus une naine, et de découvrir la commune en parcourant les sentiers pédestres, équestres et VTT.
+                  Son principe : la sphère armillaire, à proximité du COSEC, représente le Soleil. Sur un circuit d’environ 6,7 km, les planètes sont placées avec la taille et la distance calculées relativement au diamètre du Soleil/Sphère armillaire.
+                  Le seul hic : en fin de circuit, Pluton se retrouve tout près du Soleil. Alors attention au sens du circuit.
+              </p>
+            <div class="card-deck" style="width: 60%;">
+              <div class="card">
+                <a href="{{asset('build/images/chemin.jpg')}}"><img class="card-img-top" src="{{asset('build/images/chemin.jpg')}}" alt="Carte chemin" height="300px" width="50px"></a>
+                  <div class="card-body">
+                    <p class="card-text">Carte Circuit "Chemin des Planètes"</p>
+                  </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="{{asset('build/images/prosp01.jpg')}}" alt="Carte chemin explication" height="300px" width="150px">
+                  <div class="card-body">
+                    <p class="card-text">Fiche d'explication du chemin des planétes</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
   <section id="astrophotographie">
     <div class="card" data-depth="0.2">
       <div class="card-body" >
