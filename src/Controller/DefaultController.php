@@ -14,27 +14,25 @@ class DefaultController extends AbstractController
   /**
   * @Route("/",name="index")
   */
-  public function index(TranslatorInterface $translator)
+  public function index()
   {
   //return new Response('Hello World !');
-  //$haut3=$translator->trans('text.sidebar.3',[], null, 'fr');
-  //$haut2=$translator->trans('text.sidebar.2',[], null, 'fr');
-  //$haut1=$translator->trans('text.sidebar.1',[], null, 'fr');
-  //$text= $translator->trans('text.message',[], null, 'fr');
-  //$bas= $translator->trans('text.footer',[], null, 'fr');
-  //ManifestationController::manifestation($dm);
-  return $this->render('site/base.html.twig');
+  return $this->render('index.html.twig');
   }
   /**
-  * @Route("/en",name="index_EN")
+  * @Route("/observatoire",name="observatoire")
   */
-  public function index_EN(TranslatorInterface $translator)
+  public function observatoire()
   {
   //return new Response('Hello World !');
-  $text= $translator->trans('text.message',[], null, 'en');
-
-  return $this->render('index.html.twig',[
-    'text' => $text
-  ]);
+  return $this->render('site/observatoire.html.twig');
+  }
+  /**
+  * @Route("/chemindesplanete",name="chemindesplanete")
+  */
+  public function chemindesplanete()
+  {
+  //return new Response('Hello World !');
+  return $this->render('site/chemindesplanete.html.twig');
   }
 }

@@ -1,0 +1,64 @@
+.about-section {
+  img {
+    height: 500px;
+  }
+  h2 {
+     font-weight: bold;
+    color: $black;
+  }
+  p {
+
+  }
+}
+.projects-section {
+  p{
+    text-align: left;
+    margin: 10px;
+    margin-bottom: 10px;
+  }
+  .project-text {
+    font-size: 90%;
+    @media (min-width: 992px) {
+      padding: 5rem;
+      hr {
+        border-color: $primary;
+        border-width: .25rem;
+        width: 30%;
+      }
+    }
+  }
+}
+.contact-section {
+  .card {
+    border-bottom: 0.25rem solid $primary;
+    h4 {
+      font-size: 0.8rem;
+      font-family: 'Varela Round';
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+    }
+    hr {
+      border-color: $primary;
+      border-width: 0.25rem;
+      width: 3rem;
+    }
+  }
+  .social {
+    margin-top: 5rem;
+    a {
+      text-align: center;
+      height: 3rem;
+      width: 3rem;
+      background: fade-out($primary, 0.9);
+      border-radius: 100%;
+      line-height: 3rem;
+      color: fade-out($primary, 0.7);
+      &:hover {
+        color: fade-out($primary, 0.5);
+      }
+      &:active {
+        color: $white;
+      }
+    }
+  }
+}

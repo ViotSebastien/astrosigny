@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Astronomie{% endblock %}</title>
-        {% block stylesheets %}
-          <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
-        {% endblock %}
-        {% block javascripts %}
-          {{ encore_entry_script_tags('js/app') }}
-        {% endblock %}
-    </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Manifestation</title>
+{% block stylesheets %}
+<!-- Custom fonts for this template -->
+<link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{asset("build/css/app.css")}}" rel="stylesheet">
+{% endblock %}
+</head>
     {% block header %}
-      <header>
-      <div id="sidebar">
-          {% include 'exsite/menus.html.twig' %}
-      </div>
+      <header class="masthead" id="accueil">
+            {% include 'exsite/menus.html.twig' %}
+        <div class="container d-flex h-100 align-items-center">
+          <div class="mx-auto text-center">
+            <img src="{{asset('build/images/Logo_blanc.png')}}" alt="Logo_blanc">
+            <h2>MANIFESTATION</h2>
+          </div>
+        </div>
       </header>
     {% endblock %}
 <body>
@@ -23,25 +32,33 @@
         <div class="card">
           <div class="card-body" >
             <h3 class="card-title">"Pas de Manifestation en cours"</h3>
-            <a href="/manifestation/create">
-              <button type="button" name="button" class="btn btn-info">Ajouter</button>
-            </a>
           </div>
         </div>
       {% else %}
-      <a href="/manifestation/create">
-        <button type="button" name="button" class="btn btn-info">Ajouter</button>
-      </a>
         {% for showmafestations in showmafestation %}
-          <div class="card">
-            <div class="card-body" >
-              <h3 class="card-title">Manifestation {{ showmafestations.datedebut.date|date('d/m/Y H:m') }} à {{ showmafestations.datefin.date|date('d/m/Y H:m') }}</h3>
-              <h3 class="card-title">{{ showmafestations.titre }}</h3>
-              <p class="card-text">{{ showmafestations.description }}</p>
-              <a href="/manifestation/update/{id}"><button type="button" name="button" class="btn btn-warning">Modifier</button></a>
-              <a href="/manifestation/delete/{{showmafestations.id}}"><button type="button" name="button" class="btn btn-danger">Supprimer</button></a>
+        <section id="astrophotographie" class="transition">
+          <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+        </section>
+        <!-- Projects Section -->
+        <section class="projects-section">
+          <div class="container">
+
+            <!-- Featured Astrophotos Row -->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+              <div class="col-xl-6 col-lg-4">
+                <div class="text-center text-lg-left">
+                  <h2>{{ showmafestations.titre }}</h2>
+                  <h3>Du{{ showmafestations.datedebut.date|date('d/m/Y') }} au</h3>
+                  <h3>{{ showmafestations.datefin.date|date('d/m/Y') }}</h3>
+                  <p class="text-black mb-0">
+                    {{ showmafestations.description }}
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-4">
+                <img class="img-fluid mb-0 mb-lg-0" src="{{asset('build/images/apollo.jpg')}}" width="606" height="341" alt="">
+              </div>
             </div>
-          </div>
           {% endfor %}
         {% endif %}
         <div id="footer">

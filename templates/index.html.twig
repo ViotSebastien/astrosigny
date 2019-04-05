@@ -1,72 +1,256 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Astronomie{% endblock %}</title>
-        {% block stylesheets %}
-          <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
-        {% endblock %}
-        {% block javascripts %}
-          {{ encore_entry_script_tags('js/app') }}
-        {% endblock %}
-    </head>
-    <header>
-    {% block header %}
-    <div id="sidebar">
-        {% include 'exsite/menus.html.twig' %}
-    </div>
-    {% endblock %}
-  </header>
-  <body>
-    {% block body %}
-    <div class="card">
-      <div class="card-body" >
-        <h5 class="card-title">Bienvenue</h5>
-          <p class="card-text">{% trans %}%text%{% endtrans %}</p>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Astrosgny</title>
+  {% block stylesheets %}
+  <!-- Custom fonts for this template -->
+  <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{asset("build/css/app.css")}}" rel="stylesheet">
+ {% endblock %}
+</head>
+{% block body %}
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Casa Astrosigny</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/">ACCUEIL</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle js-scroll-trigger" href="#" id="thematique" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THEMATIQUE</a>
+            <div class="dropdown-menu" aria-labelledby="thematique">
+              <a class="dropdown-item" href="#astronomie">Astronomie</a>
+              <a class="dropdown-item" href="#astronautique">Astronautique</a>
+              <a class="dropdown-item" href="#astrophotographie">Astrophotographie</a>
+              <a class="dropdown-item" href="#cadran_solaire">Cadran Solaire</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle js-scroll-trigger" href="#" id="Manifestation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MANIFESTATION</a>
+            <div class="dropdown-menu" aria-labelledby="Manifestation">
+              <a class="dropdown-item" href="/observatoire">Observatoire</a>
+              <a class="dropdown-item" href="/chemindesplanete">Chemain des Planètes</a>
+              <a class="dropdown-item" href="/manifestation">Manifestation</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/contact">CONTACT</a>
+          </li>
+        </ul>
       </div>
     </div>
-    {% endblock %}
-  </body>
-  {% block footer %}
-  <footer class="mainfooter" role="contentinfo">
-    <div class="footer-middle">
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead" id="accueil">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <img src="{{asset('build/images/Logo_blanc.png')}}" alt="Logo_blanc">
+        <h2>Les astronome amateurs observent une variété d'object célestes, au moyen d'un équipement qu'il construisent parfois eux-mêmes</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Bienvenue</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ACCUEIL Section -->
+  <section id="astronomie" class="transition">
+    <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+  </section>
+
+  <section class="about-section text-center">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <!--Column1-->
-          <div class="footer-pad">
-            <h4>Adresse</h4>
-            <address>
-                  <ul class="list-unstyled">
-                    <li>
-                      {% trans %}%bas%{% endtrans %}
-                    </li>
-                  </ul>
-                </address>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <!--Column2-->
-          <div class="footer-pad">
-            <h4>Réseau Social</h4>
-            <ul class="list-unstyled">
-              <li><a href="https://www.facebook.com/profile.php?id=100011194717375"><img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV59B0D8iRczLktHkvnONKQlDive6jeaI9ARlH94wPKdBAvOii" alt="" width="50px" height="50px" ></a></li>
-            </ul>
-          </div>
+        <div class="col-lg-8 mx-auto">
+          <h2 class="mb-4">L'Astronomie</h2>
+          <p class="text-white-50">L'astronomie est considérée comme la plus ancienne des sciences1. L'archéologie révèle en effet que certaines civilisations disparues de l'Âge du bronze, et peut-être du Néolithique, avaient déjà des connaissances en astronomie. Elles avaient compris le caractère périodique des équinoxes et sans doute leur relation avec le cycle des saisons, elles savaient également reconnaître certaines constellations. L'astronomie moderne doit son développement à celui des mathématiques depuis l'antiquité grecque et à l'invention d'instruments d'observation à la fin du Moyen Âge. Si l'astronomie est pratiquée pendant plusieurs siècles parallèlement à l'astrologie, le siècle des Lumières et la redécouverte de la pensée grecque a vu naître la distinction entre la raison et la foi, si bien que l'astrologie n'est plus pratiquée par les astronomes.
+          </p>
         </div>
       </div>
+      <img src="{{asset('build/images/astronomie.jpg')}}" class="img-fluid" alt="">
     </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <!--Footer Bottom-->
-              <p class="text-xs-center">&copy; Copyright @strosigny 2019; All rights reserved.</p>
+  </section>
+
+  <section id="astrophotographie" class="transition">
+    <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+  </section>
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <div class="container">
+
+      <!-- Featured Astrophotos Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-6 col-lg-4">
+          <div class="text-center text-lg-left">
+            <h2>Astrophotographie</h2>
+            <p class="text-black mb-0">
+              Quel photographe n’a jamais rêvé d’imager le ciel étoilé ? L’astrophotographie est une discipline qui demande beaucoup d’investissement personnel, mais qui est d’une richesse incroyable.
+
+              Personnellement, je croyais savoir pas mal de choses en optique et en photo en général, mais lorsque je me suis sérieusement mis à l’astrophoto, j’ai découvert que je ne savais au final pas grand-chose ! Oh, Socrate, que tu avais raison !
+
+              Vous plonger dans les splendeurs de la nuit et du ciel profond vous fera découvrir que l’univers n’est pas noir, qu’il recèle de milliers de merveilles et vous fera mettre fin à des dizaines d’idées reçues.
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-4">
+          <img class="img-fluid mb-0 mb-lg-0" src="{{asset('build/images/astrophotography.jpg')}}" width="606" height="341" alt="">
+        </div>
+      </div>
+
+      <section id="astronautique" class="transition">
+        <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+      </section>
+      <!-- Project One Row -->
+      <div class="text-center text-lg-left">
+        <h2>Astronautique</h2>
+      </div>
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{{asset('build/images/apollo.jpg')}}" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">50 ème Anniversaire de l'Homme sur la Lune</h4>
+                <p class="mb-0 text-white">Un Petit Pas Pour l'Homme, Un Grand Boun Pour l'Humanité.</p>
+                <hr class="d-none d-lg-block mb-0 ml-2">
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6 bg-black">
+          <img class="img-fluid" src="{{asset('build/images/fusee-eau.jpg')}}" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Fusée à EAU</h4>
+                <p class="mr-0 text-white">
+                    Activité pour les enfant & Les grands
+                </p>
+                <hr class="d-none d-lg-block mb-0 mr-2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="transition" id="cadran_solaire">
+    <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+  </section>
+
+  <section class="projects-section">
+    <div class="container">
+
+      <!-- Featured Astrophotos Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-6 col-lg-4">
+          <div class="text-center text-lg-left">
+            <h2>Cadran Solaire</h2>
+            <p class="text-black mb-0">
+              Un instrument de mesure du temps
+              Cadran solaire de Tourrettes-sur-Loup.
+              Cadrans solaires à l'observatoire de Jaipur
+
+              Le cadran solaire est considéré, du fait de sa simplicité, comme l'un des tout premiers objets utilisés par l'homme pour mesurer l'écoulement du temps. Les plus anciens indicateurs solaires connus, ont été trouvés en Égypte, mais ils n'indiquaient que des instants indéfinis et non des heures au sens où nous les entendons aujourd'hui. Les premiers véritables cadrans solaires sont probablement le polos et le scaphé, basés sur la sphère, supposés être introduits par Bérose en Grèce antique au ive siècle av. J.-C. ; d'autres modèles en découlèrent (hémisphérique, conique, plan…), inventoriés dans les cadrans antiques.
+
+              Ces modèles indiquaient des « heures inégales » (heures également appelées heures temporaires variant selon le lieu et la saison) qui divisaient le jour, du lever au coucher du soleil, en 12 heures, été comme hiver : les heures d'été étaient longues, les heures d'hiver courtes. Vers le viie siècles les cadrans canoniaux apparurent en Europe à la suite des travaux de Bède le Vénérable. Ils assurèrent une transition vers les cadrans solaires à style incliné tels que nous les connaissons aujourd'hui, et dont le principe, provenant de la civilisation arabe, apparut vers les xiiie et xive siècles. L'inclinaison du style a permis de tracer un diagramme de lignes horaires indiquant des heures égales, c'est-à-dire telles que nous les utilisons : un jour, d'un midi au suivant, est divisé en 24 heures, quelle que soit l'époque de l'année.
+
+              Cadran solaire à Genève en Suisse
+
+              L'apparition et la diffusion de l'horloge, à partir de la fin du xive siècle, entraîna le développement de ce type de cadran solaire, puisque ses indications pouvaient être directement comparées avec celles des horloges : le cadran solaire disait l'heure, à charge pour l'horloge de la conserver. Les cadrans firent alors l'objet d'une science, la gnomonique, branche de l'astronomie, qui connut son apogée au xviiie siècle et d'un art, exercé par les cadraniers.
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-4">
+          <img class="img-fluid mb-0 mb-lg-0" src="{{asset('build/images/cadran_solaire.jpg')}}" width="606" height="341" alt="">
+        </div>
+      </div>
+
+      <section class="transition">
+        <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+      </section>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-55">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Adresse</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">27 Rue de Thin, 08460 Signy-l'Abbaye</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-70">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="/contact">astrosigny@free.fr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-70">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Téléphone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">03 24 56 93 02</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Viot Sébastien
+    </div>
   </footer>
+  <!-- Bootstrap core JavaScript -->
+  {% block javascripts %}
+    {{ encore_entry_script_tags('js/app') }}
+    {{ encore_entry_script_tags('js/grayscale') }}
   {% endblock %}
+
+</body>
+{% endblock %}
 </html>

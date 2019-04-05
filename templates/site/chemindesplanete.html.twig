@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Astronomie{% endblock %}</title>
-        {% block stylesheets %}
-          <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
-        {% endblock %}
-        {% block javascripts %}
-          {{ encore_entry_script_tags('js/app') }}
-        {% endblock %}
-    </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Manifestation</title>
+{% block stylesheets %}
+<!-- Custom fonts for this template -->
+<link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{asset("build/css/app.css")}}" rel="stylesheet">
+{% endblock %}
+</head>
     {% block header %}
-      <header>
-      <div id="sidebar">
-          {% include 'exsite/menus.html.twig' %}
-      </div>
+      <header class="masthead" id="accueil">
+            {% include 'exsite/menus.html.twig' %}
+        <div class="container d-flex h-100 align-items-center">
+          <div class="mx-auto text-center">
+            <img src="{{asset('build/images/Logo_blanc.png')}}" alt="Logo_blanc">
+            <h2>Chemin des Planètes</h2>
+          </div>
+        </div>
       </header>
     {% endblock %}
     {% block body %}
       <body>
-        <p>
-            Crée en mardi 07 décembre 2005, le chemin des planètes et un circuit de 6,7 km sur 6230 hectares sur le domaine de Signy L’Abbaye.
-            Ce chemin permettra de se rendre compte des distances et des tailles relatives de notre étoile, le Soleil, et des huit planètes connues plus une naine, et de découvrir la commune en parcourant les sentiers pédestres, équestres et VTT.
-            Son principe : la sphère armillaire, à proximité du COSEC, représente le Soleil. Sur un circuit d’environ 6,7 km, les planètes sont placées avec la taille et la distance calculées relativement au diamètre du Soleil/Sphère armillaire.
-            Le seul hic : en fin de circuit, Pluton se retrouve tout près du Soleil. Alors attention au sens du circuit.
-        </p>
+        <section id="astronomie" class="transition">
+          <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+        </section>
+
+        <section class="about-section text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <h2 class="mb-4">Chemin des Planètes</h2>
+                <p class="text-white-50">
+                  Crée en mardi 07 décembre 2005, le chemin des planètes et un circuit de 6,7 km sur 6230 hectares sur le domaine de Signy L’Abbaye.
+                  Ce chemin permettra de se rendre compte des distances et des tailles relatives de notre étoile, le Soleil, et des huit planètes connues plus une naine, et de découvrir la commune en parcourant les sentiers pédestres, équestres et VTT.
+                  Son principe : la sphère armillaire, à proximité du COSEC, représente le Soleil. Sur un circuit d’environ 6,7 km, les planètes sont placées avec la taille et la distance calculées relativement au diamètre du Soleil/Sphère armillaire.
+                  Le seul hic : en fin de circuit, Pluton se retrouve tout près du Soleil. Alors attention au sens du circuit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       <div class="card-deck" style="width: 60%;">
         <div class="card">
-          <a href="{{asset('build/images/chemin.jpg')}}"><img class="card-img-top" src="{{asset('build/images/chemin.jpg')}}" alt="Carte chemin" height="300px" width="50px"></a>
+          <a data-toggle="modal" data-target="#PlanPédestre">
+            <img class="card-img-top" src="{{asset('build/images/chemin.jpg')}}" alt="Carte chemin explication" height="300px" width="150px">
+          </a>
             <div class="card-body">
               <p class="card-text">Carte Circuit "Chemin des Planètes"</p>
             </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="{{asset('build/images/prosp01.jpg')}}" alt="Carte chemin explication" height="300px" width="150px">
+          <a data-toggle="modal" data-target="#explication">
+            <img class="card-img-top" src="{{asset('build/images/prosp01.jpg')}}" alt="Carte chemin explication" height="300px" width="150px">
+          </a>
             <div class="card-body">
               <p class="card-text">Fiche d'explication du chemin des planétes</p>
             </div>
@@ -41,9 +67,38 @@
     </div>
        </body>
     {% endblock %}
+
+<!-- Modal -->
+    <div class="modal fade" id="PlanPédestre" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Plan Pédestre</h5>
+          </div>
+          <div class="modal-body">
+            <img class="card-img-top" src="{{asset('build/images/chemin.jpg')}}" alt="Carte chemin explication" height="400px" width="600px">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="explication" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Explications</h5>
+          </div>
+          <div class="modal-body">
+            <img class="card-img-top" src="{{asset('build/images/prosp01.jpg')}}" alt="Carte chemin explication" height="400px" width="600px">
+          </div>
+        </div>
+      </div>
+    </div>
+
     {% block footer %}
     <footer class="mainfooter" role="contentinfo">
       {% include 'exsite/footer.html.twig' %}
     </footer>
     {% endblock %}
+
 </html>

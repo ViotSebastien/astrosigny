@@ -1,44 +1,59 @@
-  <div class="footer-middle">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <!--Column1-->
-        <div class="footer-pad">
-          <h4>Adresse</h4>
-          <address>
-								<ul class="list-unstyled">
-									<li>
-                    Club d'astronomie de Signy L'abbaye<br>
-										Médiathèque Centre Social Yves Coppens<br>
-										27 Rue de Thin<br>
-										08460 Signy-l'Abbaye<br>
-									</li>
-									<li>
-										Téléphone : 03 24 56 93 02
-									</li>
-								</ul>
-							</address>
-        </div>
+<section class="transition">
+  <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
+</section>
+<!-- Contact Section -->
+<section class="contact-section">
+<div class="container">
+
+<div class="row">
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <div class="card py-4 h-55">
+      <div class="card-body text-center">
+        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+        <h4 class="text-uppercase m-0">Adresse</h4>
+        <hr class="my-4">
+        <div class="small text-black-50">27 Rue de Thin, 08460 Signy-l'Abbaye</div>
       </div>
-      <div class="col-md-3 col-sm-6">
-        <!--Column2-->
-        <div class="footer-pad">
-          <h4>Réseau Social</h4>
-          <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/profile.php?id=100011194717375"><img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV59B0D8iRczLktHkvnONKQlDive6jeaI9ARlH94wPKdBAvOii" alt="" width="50px" height="50px" ></a></li>
-          </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <div class="card py-4 h-70">
+      <div class="card-body text-center">
+        <i class="fas fa-envelope text-primary mb-2"></i>
+        <h4 class="text-uppercase m-0">Email</h4>
+        <hr class="my-4">
+        <div class="small text-black-50">
+          <a href="#exampleModal">astrosigny@free.fr</a>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <!--Footer Bottom-->
-            <p class="text-xs-center">&copy; Copyright @strosigny 2019; All rights reserved.</p>
-          </div>
-        </div>
+
+  <div class="col-md-4 mb-3 mb-md-0">
+    <div class="card py-4 h-70">
+      <div class="card-body text-center">
+        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+        <h4 class="text-uppercase m-0">Téléphone</h4>
+        <hr class="my-4">
+        <div class="small text-black-50">03 24 56 93 02</div>
       </div>
     </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="small text-center text-white-50">
+<div class="container">
+Copyright &copy; Viot Sébastien
+</div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+{% block javascripts %}
+{{ encore_entry_script_tags('js/app') }}
+{{ encore_entry_script_tags('js/grayscale') }}
+{% endblock %}

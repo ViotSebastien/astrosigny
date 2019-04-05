@@ -1,0 +1,38 @@
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: url('images/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  img {
+    width: auto;
+    height: 100px;
+    margin-bottom: 5px;
+  }
+  h2 {
+    max-width: 20rem;
+    font-size: 0.5rem;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Abril', cursive;
+  }
+
+  @media(min-width: 992px) {
+    height: 100vh;
+    padding: 0;
+    h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+    h2 {
+      max-width: 30rem;
+      font-size: 1.25rem;
+    }
+  }
+}
