@@ -130,3 +130,26 @@ height: 90px;
   margin-top: 15px;
   margin-bottom: 2px;
 }
+
+
+.cox-animation {
+ animation: cox 10s linear reverse infinite;
+ width: 100px;
+ height: 100px;
+}
+
+@keyframes cox {
+ from {
+   transform: translate(0px);
+   background-image: url("coxaller.png");
+ }
+
+ 50% {
+   transform: translate(1080px);
+   background-image: url("coxretour.png");
+ }
+
+ to {
+   transform: translate(0px);
+ }
+}
