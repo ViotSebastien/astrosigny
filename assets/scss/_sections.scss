@@ -1,20 +1,59 @@
-.about-section {
+.who-section {
   img {
-    height: 500px;
+    height: 100px;
   }
   h2 {
-     font-weight: bold;
+    font-weight: bold;
     color: $black;
   }
   p {
 
   }
 }
+.observatoire-section {
+  margin: 100px;
+  h2 {
+    font-weight: bold;
+    color: $black;
+  }
+  p {
+
+  }
+}
+
+.contact-section{
+  margin: 100px;
+  h2 {
+    font-weight: bold;
+    color: $black;
+  }
+  p {
+
+  }
+}
+
+
+.about-section {
+  img {
+    height: 400px;
+  }
+  h2 {
+    font-weight: bold;
+    color: $black;
+  }
+  p {
+
+  }
+}
+
 .projects-section {
   p{
     text-align: left;
     margin: 10px;
     margin-bottom: 10px;
+  }
+  h2{
+    font-weight: bold;
   }
   .project-text {
     font-size: 90%;

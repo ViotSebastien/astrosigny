@@ -27,7 +27,7 @@ class ContactType extends AbstractType
             ->add('message', TextareaType::class,[
                 'constraints' => new NotBlank(),
             ])
-            ->add('save', SubmitType::class, ['label' => 'Send'])
+            ->add('save', SubmitType::class, ['label' => 'Envoie'])
             ->getForm();
     }
 
