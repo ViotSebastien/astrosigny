@@ -30,8 +30,8 @@ class ContactController extends AbstractController
     public function envoi($data,$mailer)
     {
       $message = (new \Swift_Message('demande_info'))
-        ->setFrom('Contact@astrosigny.fr')
-        ->setTo('symfonytest95@gmail.com')
+        ->setFrom('sebastien@localhost')
+        ->setTo('contact@casa-astronomie.fr')
         ->setBody(
             $this->renderView(
                 'emails/sendmail.html.twig',
