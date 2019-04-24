@@ -30,7 +30,7 @@ class ContactController extends AbstractController
     public function envoi($data,$mailer)
     {
       $message = (new \Swift_Message('demande_info'))
-        ->setFrom('sebastien@localhost')
+        ->setFrom('siteweb@casa-astronomie.fr')
         ->setTo('contact@casa-astronomie.fr')
         ->setBody(
             $this->renderView(
