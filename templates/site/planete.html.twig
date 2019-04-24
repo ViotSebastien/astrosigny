@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="{{asset('build/images/LogoSimplebleu.png')}}" type="image/x-icon" />
+  <title>CASA Astrosigny</title>
+  {% block stylesheets %}
+  <!-- Custom fonts for this template -->
+  <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{asset("build/css/app.css")}}" rel="stylesheet">
+ {% endblock %}
+</head>
+{% block body %}
+<body>
+<div id="galaxy">
+			<div id="systeme_solaire">
+				<div id="infos_titre" class="infos_astres">Les astres</div>
+        <div id="infos_soleil" class="infos_astres">Soleil</div>
+        <div id="infos_mercure" class="infos_astres">Mercure</div>
+				<div id="infos_venus" class="infos_astres">Vénus</div>
+				<div id="infos_terre" class="infos_astres">Terre</div>
+				<div id="infos_mars" class="infos_astres">Mars</div>
+				<div id="infos_jupiter" class="infos_astres">Jupiter</div>
+				<div id="infos_saturne" class="infos_astres">Saturne</div>
+				<div id="infos_uranus" class="infos_astres">Uranus</div>
+				<div id="infos_neptune" class="infos_astres">Neptune</div>
+
+
+
+				<h1>Le Système Solaire</h1>
+				<h3><<a href="/">Retour</a></h3>
+				<div id="orbite_mercure"></div>
+				<div id="orbite_venus"></div>
+				<div id="orbite_terre"></div>
+				<div id="orbite_mars"></div>
+				<div id="orbite_jupiter"></div>
+				<div id="orbite_saturne"></div>
+				<div id="orbite_uranus"></div>
+				<div id="orbite_neptune"></div>
+
+				<div id="soleil"></div>
+				<div id="mercure"></div>
+				<div id="venus"></div>
+				<div id="terre">
+					<div id="orbite_lune"></div>
+					<div id="lune"></div>
+				</div>
+				<div id="mars"></div>
+				<div id="jupiter"></div>
+				<div id="saturne"></div>
+				<div id="uranus"></div>
+				<div id="neptune"></div>
+			</div>
+		</div>
+</body>
+{% endblock %}
+</html>

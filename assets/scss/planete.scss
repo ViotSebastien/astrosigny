@@ -1,0 +1,732 @@
+#galaxy
+{
+//	background-image: url("background.png");
+	background-repeat: no-repeat;
+	background-position: center;
+  a
+  {
+  	text-decoration: none;
+  	color: #71a5b0;
+  	font-weight: bold;
+  }
+
+  a:visited
+  {
+  	text-decoration: none;
+  }
+
+  a:hover
+  {
+  	color: #FFFFFF;
+  }
+  h1
+  {
+  	float: left;
+  	font-family: Calibri;
+  	color: #71a5b0;
+  	margin-top: -50px;
+  }
+
+  h3
+  {
+  	float: left;
+  	font-family: Calibri;
+  	color: #4c757e;
+  	margin-top: -12px;
+  	margin-left: -245px;
+  	font-size: 12px;
+  }
+}
+
+.infos_astres
+{
+	font-family: Calibri;
+	font-size: 20px;
+	text-decoration: none;
+	color: #71a5b0;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.infos_astres:hover
+{
+	color: #FFFFFF;
+}
+
+
+#systeme_solaire
+{
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	padding-top: 240px;
+}
+
+#footer
+{
+	font-size: 12px;
+	color: #a6afbd;
+	padding-top: 100px;
+	margin: auto;
+	text-align: center;
+	font-family: Calibri;
+}
+
+
+ /* orbites */
+
+#orbite_mercure
+{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 2px solid #50848f;
+	margin-left: 223px;
+	margin-top:223px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_venus
+{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px solid #50848f;
+	margin-left: 198px;
+	margin-top:198px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_terre
+{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: 2px solid #487781;
+	margin-left: 173px;
+	margin-top:173px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_mars
+{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: 2px solid #487781;
+	margin-left: 148px;
+	margin-top:148px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_jupiter
+{
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	border: 2px solid #2a454b;
+	margin-left: 123px;
+	margin-top:123px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_saturne
+{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	border: 2px solid #2e4b51;
+	margin-left: 98px;
+	margin-top:98px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_uranus
+{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	border-radius: 50%;
+	border: 2px solid #2e4b51;
+	margin-left: 73px;
+	margin-top:73px;
+	transition: 0.5s ease-in-out;
+}
+
+#orbite_neptune
+{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border: 2px solid #304f55;
+	margin-left: 48px;
+	margin-top:48px;
+	transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+}
+
+#orbite_lune
+{
+	position: absolute;
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+	border: 2px solid #50848f;
+	margin-left: -10px;
+	margin-top: -10px;
+	transition: 0.5s ease-in-out;
+}
+
+ /* astres */
+
+#soleil
+{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-top: 250px;
+	margin-left: 250px;
+	transition: 0.5s ease-in-out;
+
+	background: -webkit-linear-gradient(#ffde00, #ffc600); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#ffde00, #ffc600); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#ffde00, #ffc600); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#ffde00, #ffc600); /* Standard syntax */
+}
+
+#mercure
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_mercure 5s linear infinite;
+	animation: ellipse_mercure 5s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#7d7d7d, #cccccc); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#7d7d7d, #cccccc); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#7d7d7d, #cccccc); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#7d7d7d, #cccccc); /* Standard syntax */
+
+}
+
+#venus
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_venus 8s linear infinite;
+	animation: ellipse_venus 8s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#d89504, #f7c352); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#d89504, #f7c352); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#d89504, #f7c352); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#d89504, #f7c352); /* Standard syntax */
+}
+
+#terre
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_terre 12s linear infinite;
+	animation: ellipse_terre 12s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#3858a2, #5285f7); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#3858a2, #5285f7); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#3858a2, #5285f7); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#3858a2, #5285f7); /* Standard syntax */
+}
+
+#mars
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_mars 20s linear infinite;
+	animation: ellipse_mars 20s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#891512, #cd3e1d); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#891512, #cd3e1d); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#891512, #cd3e1d); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#891512, #cd3e1d); /* Standard syntax */
+}
+
+
+#jupiter
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_jupiter 30s linear infinite;
+	animation: ellipse_jupiter 30s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#e6a32e, #ffcd75); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#e6a32e, #ffcd75); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#e6a32e, #ffcd75); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#e6a32e, #ffcd75); /* Standard syntax */
+}
+
+
+#saturne
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_saturne 60s linear infinite;
+	animation: ellipse_saturne 60s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#d4ae16, #ffdc4f); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#d4ae16, #ffdc4f); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#d4ae16, #ffdc4f); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#d4ae16, #ffdc4f); /* Standard syntax */
+}
+
+
+#uranus
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_uranus 70s linear infinite;
+	animation: ellipse_uranus 70s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#59873a, #76ca3e); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#59873a, #76ca3e); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#59873a, #76ca3e); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#59873a, #76ca3e); /* Standard syntax */
+}
+
+
+#neptune
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_neptune 100s linear infinite;
+	-moz-animation: ellipse_neptune 100s linear infinite;
+	animation: ellipse_neptune 100s linear infinite;
+	margin-top: 290px;
+	margin-left: 290px;
+
+	background: -webkit-linear-gradient(#1d596f, #5fa2bb); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#1d596f, #5fa2bb); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#1d596f, #5fa2bb); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#1d596f, #5fa2bb); /* Standard syntax */
+	background-color: #5fa2bb;
+}
+
+#lune
+{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	-webkit-animation: ellipse_lune 2s linear infinite;
+	-moz-animation: ellipse_lune 2s linear infinite;
+	animation: ellipse_lune 2s linear infinite;
+	margin-top: 5px;
+	margin-left: 5px;
+
+	background: -webkit-linear-gradient(#cccccc, #FFFFFF); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#cccccc, #FFFFFF); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#cccccc, #FFFFFF); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#cccccc, #FFFFFF); /* Standard syntax */
+}
+
+
+/* animations */
+
+	/* animation Mercure */
+@-webkit-keyframes ellipse_mercure {
+	from { -webkit-transform: rotate(0deg) translateY(-75px);}
+	to { -webkit-transform: rotate(360deg) translateY(-75px);}
+}
+
+@keyframes ellipse_mercure {
+	from { transform: rotate(0deg) translateY(-75px);}
+	to { transform: rotate(360deg) translateY(-75px);}
+}
+
+@-moz-keyframes ellipse_mercure {
+	from { -moz-transform: rotate(0deg) translateY(-75px);}
+	to { -moz-transform: rotate(360deg) translateY(-75px);}
+}
+
+	/* animation Venus */
+@-webkit-keyframes ellipse_venus {
+	from { -webkit-transform: rotate(0deg) translateY(-100px);}
+	to { -webkit-transform: rotate(360deg) translateY(-100px);}
+}
+
+@keyframes ellipse_venus {
+	from { transform: rotate(0deg) translateY(-100px);}
+	to { transform: rotate(360deg) translateY(-100px);}
+}
+
+@-moz-keyframes ellipse_venus {
+	from { -moz-transform: rotate(0deg) translateY(-100px);}
+	to { -moz-transform: rotate(360deg) translateY(-100px);}
+}
+
+	/* animation Terre */
+@-webkit-keyframes ellipse_terre {
+	from { -webkit-transform: rotate(0deg) translateY(-125px);}
+	to { -webkit-transform: rotate(360deg) translateY(-125px);}
+}
+
+@keyframes ellipse_terre {
+	from { transform: rotate(0deg) translateY(-125px);}
+	to { transform: rotate(360deg) translateY(-125px);}
+}
+
+@-moz-keyframes ellipse_terre {
+	from { -moz-transform: rotate(0deg) translateY(-125px);}
+	to { -moz-transform: rotate(360deg) translateY(-125px);}
+}
+
+	/* animation Mars */
+@-webkit-keyframes ellipse_mars {
+	from { -webkit-transform: rotate(0deg) translateY(-150px);}
+	to { -webkit-transform: rotate(360deg) translateY(-150px);}
+}
+
+@keyframes ellipse_mars {
+	from { transform: rotate(0deg) translateY(-150px);}
+	to { transform: rotate(360deg) translateY(-150px);}
+}
+
+@-moz-keyframes ellipse_mars {
+	from { -moz-transform: rotate(0deg) translateY(-150px);}
+	to { -moz-transform: rotate(360deg) translateY(-150px);}
+}
+
+	/* animation Jupiter */
+@-webkit-keyframes ellipse_jupiter {
+	from { -webkit-transform: rotate(0deg) translateY(-175px);}
+	to { -webkit-transform: rotate(360deg) translateY(-175px);}
+}
+
+@keyframes ellipse_jupiter {
+	from { transform: rotate(0deg) translateY(-175px);}
+	to { transform: rotate(360deg) translateY(-175px);}
+}
+
+@-moz-keyframes ellipse_jupiter {
+	from { -moz-transform: rotate(0deg) translateY(-175px);}
+	to { -moz-transform: rotate(360deg) translateY(-175px);}
+}
+
+	/* animation Saturne */
+@-webkit-keyframes ellipse_saturne {
+	from { -webkit-transform: rotate(0deg) translateY(-200px);}
+	to { -webkit-transform: rotate(360deg) translateY(-200px);}
+}
+
+@keyframes ellipse_saturne {
+	from { transform: rotate(0deg) translateY(-200px);}
+	to { transform: rotate(360deg) translateY(-200px);}
+}
+
+@-moz-keyframes ellipse_saturne {
+	from { -moz-transform: rotate(0deg) translateY(-200px);}
+	to { -moz-transform: rotate(360deg) translateY(-200px);}
+}
+
+	/* animation Uranus */
+@-webkit-keyframes ellipse_uranus {
+	from { -webkit-transform: rotate(0deg) translateY(-225px);}
+	to { -webkit-transform: rotate(360deg) translateY(-225px);}
+}
+
+@keyframes ellipse_uranus {
+	from { transform: rotate(0deg) translateY(-225px);}
+	to { transform: rotate(360deg) translateY(-255px);}
+}
+
+@-moz-keyframes ellipse_uranus {
+	from { -moz-transform: rotate(0deg) translateY(-225px);}
+	to { -moz-transform: rotate(360deg) translateY(-225px);}
+}
+
+	/* animation Neptune */
+@-webkit-keyframes ellipse_neptune {
+	from { -webkit-transform: rotate(0deg) translateY(-250px);}
+	to { -webkit-transform: rotate(360deg) translateY(-250px);}
+}
+
+@keyframes ellipse_neptune {
+	from { transform: rotate(0deg) translateY(-250px);}
+	to { transform: rotate(360deg) translateY(-250px);}
+}
+
+@-moz-keyframes ellipse_neptune {
+	from { -moz-transform: rotate(0deg) translateY(-250px);}
+	to { -moz-transform: rotate(360deg) translateY(-250px);}
+}
+
+	/* animation Lune */
+@-webkit-keyframes ellipse_lune{
+	from { -webkit-transform: rotate(0deg) translateY(-20px);}
+	to { -webkit-transform: rotate(360deg) translateY(-20px);}
+}
+
+@keyframes ellipse_lune {
+	from { transform: rotate(0deg) translateY(-20px);}
+	to { transform: rotate(360deg) translateY(-20px);}
+}
+
+@-moz-keyframes ellipse_lune {
+	from { -moz-transform: rotate(0deg) translateY(-20px);}
+	to { -moz-transform: rotate(360deg) translateY(-20px);}
+}
+
+/* animations infos */
+
+
+#infos_titre
+{
+	float: left;
+	margin-top: 150px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_mercure
+{
+	float: left;
+	margin-top: 200px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_venus
+{
+	float: left;
+	margin-top: 225px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_terre
+{
+	float: left;
+	margin-top: 250px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_mars
+{
+	float: left;
+	margin-top: 275px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_jupiter
+{
+	float: left;
+	margin-top: 300px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_saturne
+{
+	float: left;
+	margin-top: 325px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_uranus
+{
+	float: left;
+	margin-top: 350px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_neptune
+{
+	float: left;
+	margin-top: 375px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_lune
+{
+	float: left;
+	margin-top: 425px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_soleil
+{
+	float: left;
+	margin-top: 425px;
+	margin-left: -100px;
+	width: 100px;
+	text-align: right;
+}
+
+#infos_mercure:hover ~ #mercure
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_mercure:hover ~ #orbite_mercure
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+	transform: scale(1.02);
+}
+
+#infos_venus:hover ~ #venus
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_venus:hover ~ #orbite_venus
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_terre:hover ~ #terre
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_terre:hover ~ #orbite_terre
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-webkit-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_mars:hover ~ #mars
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_mars:hover ~ #orbite_mars
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_jupiter:hover ~ #jupiter
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_jupiter:hover ~ #orbite_jupiter
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_saturne:hover ~ #saturne
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_saturne:hover ~ #orbite_saturne
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_uranus:hover ~ #uranus
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_uranus:hover ~ #orbite_uranus
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_neptune:hover ~ #neptune
+{
+	width: 22px;
+	height: 22px;
+}
+
+#infos_neptune:hover ~ #orbite_neptune
+{
+	border: 3px solid #ff8a00;
+	-webkit-transform: scale(1.01);
+	-moz-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+#infos_soleil:hover ~ #soleil
+{
+	width: 110px;
+	height: 110px;
+	margin-left: 245px;
+	margin-top: 245px;
+}

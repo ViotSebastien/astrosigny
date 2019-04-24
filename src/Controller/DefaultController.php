@@ -36,11 +36,11 @@ class DefaultController extends AbstractController
   return $this->render('site/chemindesplanete.html.twig');
   }
   /**
-  * @Route("/cox",name="cox")
+  * @Route("/planete",name="planete")
   */
-  public function cox()
+  public function planete()
   {
   //return new Response('Hello World !');
-  return $this->render('site/cox.html.twig');
+  return $this->render('site/planete.html.twig');
   }
 }
