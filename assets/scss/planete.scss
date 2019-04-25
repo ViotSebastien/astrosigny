@@ -17,7 +17,7 @@
 
   a:hover
   {
-  	color: #FFFFFF;
+  	color: Black;
   }
   h1
   {
@@ -183,7 +183,6 @@
 	margin-top: -10px;
 	transition: 0.5s ease-in-out;
 }
-
  /* astres */
 
 #soleil
@@ -289,7 +288,6 @@
 	background: linear-gradient(#e6a32e, #ffcd75); /* Standard syntax */
 }
 
-
 #saturne
 {
 	position: absolute;
@@ -307,6 +305,17 @@
 	background: linear-gradient(#d4ae16, #ffdc4f); /* Standard syntax */
 }
 
+#anneaux_saturne
+{
+	position: absolute;
+	width: 37px;
+	height: 37px;
+	border-radius: 50%;
+	border: 8px solid #e6a32e;
+	margin-left: -10px;
+	margin-top: -10px;
+	transition: 0.5s ease-in-out;
+}
 
 #uranus
 {
@@ -469,7 +478,7 @@
 
 @keyframes ellipse_uranus {
 	from { transform: rotate(0deg) translateY(-225px);}
-	to { transform: rotate(360deg) translateY(-255px);}
+	to { transform: rotate(360deg) translateY(-225px);}
 }
 
 @-moz-keyframes ellipse_uranus {
