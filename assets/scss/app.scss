@@ -16,11 +16,19 @@ header {
 }
 // ******************************* Nav **********************************
 .dropdown-menu {
+<<<<<<< HEAD
   background-color: transparent !important;
   .dropdown-item {
     color: white !important;
     text-align: center !important;
     background-color: transparent !important;
+=======
+  background-color: transparent !veryimportant;
+  .dropdown-item {
+    color: white !veryimportant;
+    text-align: center !veryimportant;
+    background-color: transparent !veryimportant;
+>>>>>>> 997c312bdaf612856e788521eb71ba56a1935658
   }
 }
 
@@ -140,12 +148,21 @@ height: 90px;
 }
 
 .col-md-4 {
+<<<<<<< HEAD
       width: auto !important;
+=======
+      width: auto !veryimportant;
+>>>>>>> 997c312bdaf612856e788521eb71ba56a1935658
 }
 
 @media (min-width: 768px){
   .col-md-4 {
+<<<<<<< HEAD
       flex: 1 0 33.33333% !important;
       max-width: 100px !important;
+=======
+      flex: 1 0 33.33333% !veryimportant;
+      max-width: 100px !veryimportant;
+>>>>>>> 997c312bdaf612856e788521eb71ba56a1935658
   }
 }
