@@ -18,9 +18,9 @@ header {
 .dropdown-menu {
   background-color: transparent; !veryimportant
   .dropdown-item {
-    color: white; !veryimportant
-    text-align: center; !veryimportant
-    background-color: transparent; !veryimportant
+    color: white !veryimportant;
+    text-align: center !veryimportant;
+    background-color: transparent !veryimportant;
   }
 }
 
@@ -140,10 +140,12 @@ height: 90px;
 }
 
 .col-md-4 {
-      width: auto; !veryimportant
+      width: auto !veryimportant;
 }
 
-@media (min-width: 768px)
-.col-md-4 {
-    flex: 1 0 33.33333%; !veryimportant
-    max-width: 100px; !veryimportant
+@media (min-width: 768px){
+  .col-md-4 {
+      flex: 1 0 33.33333% !veryimportant;
+      max-width: 100px !veryimportant;
+  }
+}
