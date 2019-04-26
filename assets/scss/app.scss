@@ -16,11 +16,11 @@ header {
 }
 // ******************************* Nav **********************************
 .dropdown-menu {
-  background-color: transparent; !veryimportant
+  background-color: transparent !important;
   .dropdown-item {
-    color: white; !veryimportant
-    text-align: center; !veryimportant
-    background-color: transparent; !veryimportant
+    color: white !important;
+    text-align: center !important;
+    background-color: transparent !important;
   }
 }
 
@@ -140,10 +140,12 @@ height: 90px;
 }
 
 .col-md-4 {
-      width: auto; !veryimportant
+      width: auto !important;
 }
 
-@media (min-width: 768px)
-.col-md-4 {
-    flex: 1 0 33.33333%; !veryimportant
-    max-width: 100px; !veryimportant
+@media (min-width: 768px){
+  .col-md-4 {
+      flex: 1 0 33.33333% !important;
+      max-width: 100px !important;
+  }
+}
