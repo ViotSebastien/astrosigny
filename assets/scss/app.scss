@@ -15,7 +15,14 @@ header {
   height: auto;
 }
 // ******************************* Nav **********************************
-
+.dropdown-menu {
+  background-color: transparent; !veryimportant
+  .dropdown-item {
+    color: white; !veryimportant
+    text-align: center; !veryimportant
+    background-color: transparent; !veryimportant
+  }
+}
 
 .modal-body {
   height: auto;
@@ -131,3 +138,12 @@ height: 90px;
   margin-top: 15px;
   margin-bottom: 2px;
 }
+
+.col-md-4 {
+      width: auto; !veryimportant
+}
+
+@media (min-width: 768px)
+.col-md-4 {
+    flex: 1 0 33.33333%; !veryimportant
+    max-width: 100px; !veryimportant
