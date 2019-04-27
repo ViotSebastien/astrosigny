@@ -80,7 +80,7 @@ p{
 }
 // ******************************* Formulaire **********************************
 #black{
-background-color: black;
+background-image: url('images/background.png');
 width: auto;
 height: 90px;
 }
@@ -97,9 +97,13 @@ height: 90px;
   margin: auto;
   margin-top: 60px;
   background-image: url('images/contact.jpg');
+  h2 {
+    font-size: 1.5rem;
+  }
   label.required
   {
     margin: 5px;
+    font-size: 1.2rem;
   }
   input#contact_name
   {
