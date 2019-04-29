@@ -152,6 +152,16 @@ height: 90px;
       width: auto !important;
 }
 
+.facebook {
+  background-image: url(/build/images/minilogo.bfca150d.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -25px -219px;
+  height: 24px;
+  width: 24px;
+  display: block;
+}
+
 @media (min-width: 768px){
   .col-md-4 {
       flex: 1 0 33.33333% !important;
