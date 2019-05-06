@@ -30,7 +30,11 @@
         <img src="{{asset('build/images/Logo_blanc.png')}}" alt="Logo_blanc">
         <h2>Club d'Astronomie de Signy l'Abbaye et ses Environs</h2>
         <!-- <h2>Les astronomes amateurs observent une variété d'objects célestes, au moyen d'un équipement qu'ils construisent parfois eux-mêmes</h2>-->
+        {% if login is empty%}
         <a href="#about" class="btn btn-primary js-scroll-trigger">Bienvenue</a>
+        {% else %}
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Bienvenue {{ login.username }}</a>
+        {% endif %}
       </div>
     </div>
   </header>
