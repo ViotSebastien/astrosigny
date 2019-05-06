@@ -2,11 +2,12 @@
 
 namespace App\Document;
 
+use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 /**
  * @MongoDB\Document
  */
-class User
+class User implements UserInterface
 {
     /**
      * @MongoDB\Id
@@ -27,6 +28,20 @@ class User
      * @MongoDB\Field(type="string")
      */
     protected $email;
+    /**
+     * @MongoDB\Field(type="string")
+     */
+     private $roles = [];
+
+     public function getRoles(): array
+     {
+         $roles = $this->roles;
+         // guarantee every user at least has ROLE_USER
+         $roles[] = 'ROLE_USER';
+
+         return array_unique($roles);
+     }
+
 
     public function getId()
     {
@@ -61,4 +76,23 @@ class User
       return $this->password;
     }
 
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
+    public function getSalt()
+    {
+        // The bcrypt and argon2i algorithms don't require a separate salt.
+        // You *may* need a real salt if you choose a different encoder.
+        return null;
+    }
+    public function eraseCredentials()
+    {
+    }
 }

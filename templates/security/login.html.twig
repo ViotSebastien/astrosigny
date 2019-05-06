@@ -5,7 +5,6 @@
         <title>{% block title %}Astronomie - login{% endblock %}</title>
         {% block stylesheets %}
           <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
-          {% form_theme login 'bootstrap_4_layout.html.twig' %}
         {% endblock %}
 
         {% block javascripts %}
@@ -23,7 +22,22 @@
       {% block body %}
       <div id="formulaire">
           <h2> Login </h2>
-          <h3>{{ form(login) }}</h3>
+            <form method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <button class="btn btn-lg btn-primary" type="submit">
+                Sign in
+            </button>
+        </form>
       </div>
         {% endblock %}
       </body>
