@@ -29,9 +29,9 @@ class User implements UserInterface
      */
     protected $email;
     /**
-     * @MongoDB\Field(type="string")
+     * @MongoDB\Field(type="collection")
      */
-     private $roles = [];
+     protected $roles = [];
 
      public function getRoles(): array
      {
@@ -41,7 +41,6 @@ class User implements UserInterface
 
          return array_unique($roles);
      }
-
 
     public function getId()
     {

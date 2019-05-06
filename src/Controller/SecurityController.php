@@ -48,7 +48,7 @@ class SecurityController extends AbstractController
             $passwords=$passwordEncoder->encodePassword($user,$data["password"]);
             var_dump($passwords);
             $user->setpassword($passwords);
-            $user->setRoles("ROLE_USER");
+            $user->getRoles();
             $dm->persist($user);
             $dm->flush();
             return $this->redirectToRoute('index');
