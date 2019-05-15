@@ -33,6 +33,9 @@ class ManifestationType extends AbstractType
               ]
             ])
             ->add('description',TextareaType::class)
+            ->add('image', TextType::class,[
+                'constraints' => new NotBlank(),
+            ])
             ->add('save', SubmitType::class, ['label' => 'Send'])
             ->getForm();
     }

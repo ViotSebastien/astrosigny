@@ -26,6 +26,7 @@ class ManifestationController extends AbstractController
               $manifestation[$i]->setDateFin($data[$i]->getDateFin());
               $manifestation[$i]->setDateDebut($data[$i]->getDateDebut());
               $manifestation[$i]->setDescription($data[$i]->getDescription());
+              $manifestation[$i]->setImage($data[$i]->getImage());
             }
             return $this->render('site/manifestation.html.twig',
             ['showmafestation' => $manifestation]);
@@ -48,6 +49,7 @@ class ManifestationController extends AbstractController
             $manifestation->setDateDebut($data["datedebut"]);
             $manifestation->setDateFin($data["datefin"]);
             $manifestation->setDescription($data["description"]);
+            $manifestation->setImage($data["image"]);
             $dm->persist($manifestation);
             $dm->flush();
             return $this->redirectToRoute('manifestation');
