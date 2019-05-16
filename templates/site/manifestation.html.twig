@@ -58,14 +58,16 @@
                 </div>
               </div>
               <div class="col-xl-6 col-lg-4">
-                <img class="img-fluid mb-0 mb-lg-0" src="{{asset('build/images/apollo.jpg')}}" width="606" height="341" alt="">
+                <img class="img-fluid mb-0 mb-lg-0" src="{{asset('build/images/'~showmafestations.image)}}" width="606" height="341" alt="">
               </div>
             </div>
           {% endfor %}
         {% endif %}
-        <div id="footer">
-            {% include 'exsite/footer.html.twig' %}
-        </div>
+        {% block footer %}
+        <footer>
+          {% include 'exsite/footer.html.twig' %}
+        </footer>
+        {% endblock %}
     </body>
     {% endblock %}
 </html>

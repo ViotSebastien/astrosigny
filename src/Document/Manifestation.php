@@ -32,6 +32,10 @@ class Manifestation
      * @MongoDB\Field(type="string")
      */
     protected $description;
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $image;
 
     public function getId()
     {
@@ -73,5 +77,12 @@ class Manifestation
     {
       return $this->datedebut=$datedebut;
     }
-
+    public function getImage()
+    {
+      return $this->image;
+    }
+    public function setImage($image)
+    {
+      return $this->image=$image;
+    }
 }
