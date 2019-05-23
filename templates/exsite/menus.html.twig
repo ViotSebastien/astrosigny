@@ -30,7 +30,7 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/contact">CONTACT</a>
         </li>
-        {% if is_granted('ROLE_ADMIN') %}
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')%}
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="{{ path("logout") }}">LOGOUT</a>
         </li>

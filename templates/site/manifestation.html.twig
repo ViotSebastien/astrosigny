@@ -37,7 +37,10 @@
           </div>
         </div>
       {% else %}
-        {% for showmafestations in showmafestation%}
+      {% if is_granted('ROLE_USER') %}
+          <a class="btn btn-warning js-scroll-trigger" href="/manifestation/delete/{{showmafestations.id}}">Ajouter</a>
+      {% endif %}
+        {% for showmafestations in showmafestation %}
         <section id="astrophotographie" class="transition">
           <img src="{{asset('build/images/LogoSimplebleu.png')}}" alt="">
         </section>
@@ -51,7 +54,9 @@
                 <div class="text-center text-lg-left">
                   {% if is_granted('ROLE_ADMIN') %}
                       <a class="btn btn-danger js-scroll-trigger" href="/manifestation/delete/{{showmafestations.id}}">Delete</a>
+                        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_USER') %}
                       <a class="btn btn-warning js-scroll-trigger" href="/manifestation/delete/{{showmafestations.id}}">Update</a>
+                      {% endif %}
                   {% endif %}
                   <h2>{{ showmafestations.titre }}</h2>
                   <h3>Du{{ showmafestations.datedebut.date|date('d/m/Y') }} Au</h3>
