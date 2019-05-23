@@ -11,7 +11,9 @@
     }
   }
   .navbar-brand {
-    color: $black;
+
+    height: 50px;
+    width: 250px;
     font-weight: 700;
     padding: .9rem 0;
   }
@@ -36,8 +38,10 @@
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
     .navbar-brand {
-      padding: .5rem 0;
-      color: $white;
+      background-image: url('images/Logo_blanc.png');
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     .nav-link {
       transition: none;
@@ -54,6 +58,7 @@
       background-color: $white;
       .navbar-brand {
         color: $black;
+        background-image: url('images/Logocasafondblancs.png');
       }
       .nav-link {
         color: $black;
