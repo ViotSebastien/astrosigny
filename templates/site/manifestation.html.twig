@@ -48,6 +48,10 @@
             <div class="row align-items-center no-gutters mb-4 mb-lg-5">
               <div class="col-xl-6 col-lg-4">
                 <div class="text-center text-lg-left">
+                  {% if is_granted('ROLE_ADMIN') %}
+                      <a class="btn btn-danger js-scroll-trigger" href="/manifestation/delete/{{showmafestations.id}}">Delete</a>
+                      <a class="btn btn-warning js-scroll-trigger" href="/manifestation/delete/{{showmafestations.id}}">Update</a>
+                  {% endif %}
                   <h2>{{ showmafestations.titre }}</h2>
                   <h3>Du{{ showmafestations.datedebut.date|date('d/m/Y') }} Au</h3>
                   <h3>{{ showmafestations.datefin.date|date('d/m/Y') }}</h3>
