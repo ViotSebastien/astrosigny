@@ -9,15 +9,15 @@ security:
             cost: 12
     providers:
         in_memory: { memory: ~ }
-        user_db:
-            entity: { class: App\Document\User, property: email }
+        my_mongo_provider:
+          mongodb: { class: App\Document\User, property: email }
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
-            provider: user_db
+            provider: my_mongo_provider
             guard:
                 authenticators:
                     - App\Security\LoginFormAuthenticator
