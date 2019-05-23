@@ -17,7 +17,6 @@ class ManifestationController extends AbstractController
   {
   //return new Response('manifestation !');
         $data=$dm->getRepository('App:Manifestation')->findby([],['datedebut' => 'ASC']);
-        var_dump($data);
         if ($data != NULL ){
           for ($i=0; $i < sizeof($data); $i++)
             {
