@@ -16,7 +16,8 @@ class ManifestationController extends AbstractController
   public function manifestation(DocumentManager $dm)
   {
   //return new Response('manifestation !');
-        $data=$dm->getRepository('App:Manifestation')->findAll();
+        $data=$dm->getRepository('App:Manifestation')->findby([],['datedebut' => 'ASC']);
+        var_dump($data);
         if ($data != NULL ){
           for ($i=0; $i < sizeof($data); $i++)
             {
