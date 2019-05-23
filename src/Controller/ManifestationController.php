@@ -3,6 +3,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use App\Document\Manifestation;
 use App\Form\ManifestationType;
@@ -36,6 +37,7 @@ class ManifestationController extends AbstractController
   }
 
   /**
+  * @Security("is_granted('ROLE_ADMIN')")
   * @Route("/manifestation/create",name="addmanifestation",methods={"POST","GET"})
   */
     public function createAction(Request $request,DocumentManager $dm)
@@ -59,6 +61,7 @@ class ManifestationController extends AbstractController
         ]);
     }
     /**
+    * @Security("is_granted('ROLE_ADMIN')")
     * @Route("/manifestation/delete/{id}",name="deletemanifestation",methods={"GET","HEAD"})
     */
     public function deleteAction($id,DocumentManager $dm)
@@ -69,6 +72,7 @@ class ManifestationController extends AbstractController
             return $this->redirectToRoute('manifestation');
     }
     /**
+    * @Security("is_granted('ROLE_ADMIN')")
     * @Route("/manifestation/update/{id}",name="updatemanifestation",methods={"GET","POST"})
     */
 /*   public function updateAction($id,DocumentManager $dm)

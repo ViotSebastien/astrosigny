@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Astronomie - register{% endblock %}</title>
+        {% block stylesheets %}
+          <link rel="stylesheet" href="{{asset('build/css/app.css')}}">
+          {% form_theme register 'bootstrap_4_layout.html.twig' %}
+        {% endblock %}
+
+        {% block javascripts %}
+          {{ encore_entry_script_tags('js/app') }}
+        {% endblock %}
+    </head>
+    <header>
+    {% block header %}
+    <div id="sidebar">
+        {% include 'exsite/menus.html.twig' %}
+    </div>
+    {% endblock %}
+  </header>
+    <body>
+      {% block body %}
+      <div id="formulaire">
+          <h2> Register </h2>
+          <h3>{{ form(register) }}</h3>
+      </div>
+        {% endblock %}
+      </body>
+      {% block footer %}
+      <footer>
+          {% include 'exsite/footer.html.twig' %}
+      </footer>
+      {% endblock %}
+</html>
